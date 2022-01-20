@@ -15,7 +15,7 @@ represent_values_and_annotations_as_json:
 
 uberon_test_labelling:
   - classes:
-      - UBERON_0002113
+      - UBERON:0002113
     label: Kidney
 
 curie_map:
