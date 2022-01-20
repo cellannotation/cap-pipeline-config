@@ -13,7 +13,7 @@ represent_values_and_annotations_as_json:
     - "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"
     - "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"
 
-uberon_test_labelling:
+neo_node_labelling:
   - classes:
       - UBERON:0002113
     label: Kidney
