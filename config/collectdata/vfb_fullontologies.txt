@@ -1,1 +1,2 @@
 https://raw.githubusercontent.com/obophenotype/uberon/v2021-11-28/uberon-full.owl
+https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl.owl
