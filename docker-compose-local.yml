@@ -3,6 +3,7 @@ version: '3.3'
 services:
   vfb-triplestore:
     image: matentzn/vfb-pipeline-triplestore
+    container_name: triplestore
     environment:
       - JVM_PARAMS=-Xms1G -Xmx5G
       - RDF4J_DATA=/data
@@ -10,6 +11,7 @@ services:
       - 8181:8080
   vfb-collectdata:
     image: matentzn/vfb-pipeline-collectdata:latest
+    container_name: collectdata
     build:
       context: ../vfb-pipeline-collectdata
       dockerfile: Dockerfile
@@ -22,6 +24,7 @@ services:
       - vfb_data:/out
   vfb-updatetriplestore:
     image: matentzn/vfb-pipeline-updatetriplestore:latest
+    container_name: updatetriplestore
     build:
       context: ../vfb-pipeline-updatetriplestore
       dockerfile: Dockerfile
@@ -39,6 +42,7 @@ services:
       - vfb_data:/data
   vfb-dumps:
     image: matentzn/vfb-pipeline-dumps:latest
+    container_name: dumps
     build:
       context: ../vfb-pipeline-dumps
       dockerfile: Dockerfile
@@ -54,6 +58,7 @@ services:
       - vfb_data:/out
   solr:
     image: virtualflybrain/vfb-solr
+    container_name: solr
     ports:
      - 8993:8983
     depends_on:
