@@ -1,27 +1,4 @@
 version: '3.3'
-# networks:
-#     dockernet:
-#       external:
-#         name: dockernet
-#networks:
-#    internal:
-#        driver: bridge
-# Dependencies:
-
-# vfb-kb
-## vfb-kb2kb
-### vfb-validatekb
-#### vfb-collectdata
-
-# vfb-triplestore
-## vfb-updatetriplestore
-
-# vfb-dumps
-# vfb-owlery
-
-# vfb-prod
-## vfb-updateprod
-
 
 services:
   vfb-triplestore:
@@ -39,17 +16,10 @@ services:
       args:
         - CONF_REPO=${CONF_REPO}
         - CONF_BRANCH=${CONF_BRANCH}
-    depends_on:
-      - vfb-kb
-      - vfb-validatekb
-    links:
-      - vfb-kb
     environment:
       - KBserver=http://vfb-kb:7474
     volumes:
       - vfb_data:/out
-#    networks:
-#      - dockernet
   vfb-updatetriplestore:
     image: matentzn/vfb-pipeline-updatetriplestore:latest
     build:
@@ -67,8 +37,6 @@ services:
       - SERVER=http://vfb-triplestore:8080
     volumes:
       - vfb_data:/data
-#    networks:
-#      - dockernet
   vfb-dumps:
     image: matentzn/vfb-pipeline-dumps:latest
     build:
@@ -84,8 +52,6 @@ services:
       - vfb-triplestore
     volumes:
       - vfb_data:/out
-#    networks:
-#      - dockernet
   solr:
     image: virtualflybrain/vfb-solr
     ports:
@@ -100,8 +66,6 @@ services:
     - bash
     - "-c"
     - "precreate-core ontology; precreate-core bdsdump; exec solr -f"
-  #    networks:
-  #      - dockernet
 volumes:
   vfb_data:
   solr_data:
