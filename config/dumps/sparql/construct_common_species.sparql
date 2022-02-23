@@ -1,0 +1,13 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+CONSTRUCT {
+	?s <http://n2o.neo/property/nodeLabel> "Common_species" .
+}
+WHERE {
+    ?s <http://purl.obolibrary.org/obo/ncbitaxon#has_rank>  <http://purl.obolibrary.org/obo/NCBITaxon_species>. ?s rdfs:label ?label
+VALUES ?s
+{obo:NCBITaxon_9606 obo:NCBITaxon_10090 obo:NCBITaxon_7955 obo:NCBITaxon_7227 obo:NCBITaxon_10116 obo:NCBITaxon_6239 obo:NCBITaxon_9031 obo:NCBITaxon_8296
+}
+}
