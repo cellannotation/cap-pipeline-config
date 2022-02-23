@@ -15,11 +15,8 @@ represent_values_and_annotations_as_json:
 
 neo_node_labelling:
   - classes:
-      - BFO:0000050 some UBERON:0002113
-    label: Kidney
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002113
-    label: Kidney_cell
+      - NCBITaxon_33208
+    label: Metazoan
 
 curie_map:
   GITHUB: https://github.com/
