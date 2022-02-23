@@ -25,4 +25,4 @@ dumps/config.env has
 
 DUMPS_SOLR="all deprecation has_image"
 
-=> has_image label and deprecation label added to complete dump of triplestore content (all) to SOLR
+=> `has_image` and `deprecation` (obsolete) semantics tags loaded along with complete dump of triplestore content (all) to SOLR
