@@ -5,6 +5,9 @@
 2. Add the label name to the to the correct DUMPS variable for the service is should appear in (DUMPS_SOLR, DUMPS_PDB, DUMPS_OWLERY) in dumps/config.env
 
 e.g. 
+
+construct_has_image.sparql file has content
+
 ```sparql
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -17,3 +20,9 @@ WHERE {
   # Some SELECT criteria in here.
 }
 ```
+
+dumps/config.env has
+
+DUMPS_SOLR="all deprecation has_image"
+
+=> has_image label and deprecation label added to complete dump of triplestore content (all) to SOLR
