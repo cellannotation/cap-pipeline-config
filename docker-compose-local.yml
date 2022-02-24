@@ -24,16 +24,16 @@ version: '3.3'
 
 
 services:
-  vfb-kb:
-    # image: virtualflybrain/docker-neo4j-knowledgebase:neo2owl
-    # image: virtualflybrain/docker-vfb-neo4j:enterprise
-    image: virtualflybrain/vfb-prod:kb
-    build:
-      context: ../docker-neo4j-knowledgebase
-      dockerfile: Dockerfile
-      args:
-        - CONF_REPO=${CONF_REPO}
-        - CONF_BRANCH=${CONF_BRANCH}
+        #  vfb-kb:
+        #    # image: virtualflybrain/docker-neo4j-knowledgebase:neo2owl
+        #    # image: virtualflybrain/docker-vfb-neo4j:enterprise
+        #    image: virtualflybrain/vfb-prod:kb
+        #    build:
+        #      context: ../docker-neo4j-knowledgebase
+        #      dockerfile: Dockerfile
+        #      args:
+        #        - CONF_REPO=${CONF_REPO}
+        #        - CONF_BRANCH=${CONF_BRANCH}
     # deploy:
     #   replicas: 1
     #   resources:
@@ -42,23 +42,23 @@ services:
     #       memory: 6G
     #   restart_policy:
     #     condition: on-failure
-    environment:
-      - NEO4J_AUTH=neo4j/neo
-      - NEO4J_dbms_read__only=false
-      - NEO4J_dbms_memory_heap_maxSize=15G
-      - NEO4J_dbms_memory_heap_initial__size=1G
+    #    environment:
+    #      - NEO4J_AUTH=neo4j/neo
+    #      - NEO4J_dbms_read__only=false
+    #      - NEO4J_dbms_memory_heap_maxSize=15G
+    #      - NEO4J_dbms_memory_heap_initial__size=1G
       #- NEO4J_dbms_memory_pagecache_size=20G
-    ports:
-      - 7474:7474
-      - 7687:7687
-    volumes:
-      - vfb_data:/data_transfer
-    deploy:
-      resources:
-        limits:
-          memory: 25G
-        reservations:
-          memory: 1G
+      #    ports:
+      #      - 7474:7474
+      #      - 7687:7687
+      #    volumes:
+      #      - vfb_data:/data_transfer
+      #    deploy:
+      #      resources:
+      #        limits:
+      #          memory: 25G
+      #        reservations:
+      #          memory: 1G
   vfb-triplestore:
     image: matentzn/vfb-pipeline-triplestore
     environment:
@@ -99,21 +99,21 @@ services:
   #     - KBserver=http://vfb-kb:7474
 #    networks:
 #      - dockernet
-  vfb-validatekb:
-    image: matentzn/vfb-pipeline-validatekb:latest
-    build:
-      context: ../vfb-pipeline-validatekb
-      dockerfile: Dockerfile
-      args:
-        - CONF_REPO=${CONF_REPO}
-        - CONF_BRANCH=${CONF_BRANCH}
-    depends_on:
-      - vfb-kb
-    links:
-      - vfb-kb
-    environment:
-      - KBpassword=neo4j/neo
-      - KBserver=http://vfb-kb:7474
+#  vfb-validatekb:
+#    image: matentzn/vfb-pipeline-validatekb:latest
+#    build:
+#      context: ../vfb-pipeline-validatekb
+#      dockerfile: Dockerfile
+#      args:
+#        - CONF_REPO=${CONF_REPO}
+#        - CONF_BRANCH=${CONF_BRANCH}
+#    depends_on:
+#      - vfb-kb
+#    links:
+#      - vfb-kb
+#    environment:
+#      - KBpassword=neo4j/neo
+#      - KBserver=http://vfb-kb:7474
 #    networks:
 #      - dockernet
   vfb-collectdata:
@@ -124,11 +124,11 @@ services:
       args:
         - CONF_REPO=${CONF_REPO}
         - CONF_BRANCH=${CONF_BRANCH}
-    depends_on:
-      - vfb-kb
-      - vfb-validatekb
-    links:
-      - vfb-kb
+          #    depends_on:
+          #      - vfb-kb
+          #      - vfb-validatekb
+          #    links:
+          #      - vfb-kb
     environment:
       - KBserver=http://vfb-kb:7474
     volumes:
@@ -175,20 +175,20 @@ services:
       - vfb_data:/input
 #    networks:
 #      - dockernet
-  vfb-owlery:
-    image: phenoscape/owlery
-    build:
-      context: ../owlery-vfb
-      dockerfile: Dockerfile
-      args:
-        - CONF_REPO=${CONF_REPO}
-        - CONF_BRANCH=${CONF_BRANCH}
-    depends_on:
-      - vfb-dumps
-    links:
-      - vfb-dumps
-    ports:
-      - 80:8080
+#  vfb-owlery:
+#    image: phenoscape/owlery
+#    build:
+#      context: ../owlery-vfb
+#      dockerfile: Dockerfile
+#      args:
+#        - CONF_REPO=${CONF_REPO}
+#        - CONF_BRANCH=${CONF_BRANCH}
+#    depends_on:
+#      - vfb-dumps
+#    links:
+#      - vfb-dumps
+#    ports:
+#      - 80:8080
 #    networks:
 #      - dockernet
   vfb-dumps:
