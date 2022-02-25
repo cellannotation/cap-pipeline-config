@@ -15,7 +15,7 @@ represent_values_and_annotations_as_json:
 
 neo_node_labelling:
   - classes:
-      - NCBITaxon_33208
+      - NCBITaxon:33208
     label: Metazoan
 
 curie_map:
