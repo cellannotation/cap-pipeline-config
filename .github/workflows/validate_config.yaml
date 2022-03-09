@@ -5,6 +5,8 @@ on:
     branches: [ main ]
     paths:
       - 'config/prod/neo4j2owl-config.yaml'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   yaml-schema-validation:
@@ -15,5 +17,3 @@ jobs:
       with:
         schema: schema.yaml
         target: config/prod/neo4j2owl-config.yaml
-        # Uncomment to disable strict checks
-        # no-strict: true
