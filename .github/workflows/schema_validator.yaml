@@ -32,8 +32,6 @@ jobs:
         ls -l
         "echo \"<details>\n <summary> config/prod/neo4j2owl-config.yaml file failed the schema validation check </summary> \n\" > comment.md; cat validation.report >> comment.md"
         ls -l
-        cat comment.md
-        exit 1
     - name: Post comment validator comment
       if: ${{ failure() }}
       env:
