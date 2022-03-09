@@ -1,0 +1,34 @@
+
+name: YAML schema validator
+on:
+  # Triggers the workflow on pull request events but only for the main branch
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'config/prod/neo4j2owl-config.yaml'
+
+jobs:
+  yaml-schema-validation:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: install Yamale
+      run: brew install yamale
+    - name: schema validation
+      id: validation
+      run: |
+        yamale -s schema.yaml config/prod/neo4j2owl-config.yaml | tee output
+        tail -n +4 output > validation.report
+        echo ::set-output name=report::$(cat output)
+    - name: Prepare schema validator comment
+      if: contains(steps.validation.outputs.report, 'Error')
+      run: |
+        echo "<details>   <summary> config/prod/neo4j2owl-config.yaml file failed the schema validation check </summary>   " > comment.md; cat validation.report >> comment.md
+        exit 1
+    - name: Post comment validator comment
+      if: ${{ failure() }}
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      uses: NejcZdovc/comment-pr@v1.1.1
+      with:
+        file: "../../comment.md"
