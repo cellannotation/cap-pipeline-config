@@ -17,12 +17,15 @@ jobs:
     - name: install Yamale
       run: brew install yamale
     - name: schema validation
-      run: yamale -s schema.yaml config/prod/neo4j2owl-config.yaml | tee validation.report
+      id: validation
+      run: |
+        yamale -s schema.yaml config/prod/neo4j2owl-config.yaml | tee validation.report
+        echo ::set-output name=report::$(cat validation.report)
     - name: Prepare schema validator comment
-      if: ${{ failure() }}
+      if: contains(steps.validation.outputs.report, 'Error')
       run: "echo \"<details>\n <summary> config/prod/neo4j2owl-config.yaml file failed the schema validation check </summary> \n\" > comment.md; cat validation.report >> comment.md"
     - name: Post comment validator comment
-      if: ${{ failure() }}
+      if: contains(steps.validation.outputs.report, 'Error')
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       uses: NejcZdovc/comment-pr@v1.1.1
