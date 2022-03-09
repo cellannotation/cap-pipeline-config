@@ -17,6 +17,8 @@ neo_node_labelling:
   - classes:
       - NCBITaxon:33208
       - BFO:0000:050 some UBERON:0002113
+      - BFO_0000050 some UBERON:0002113
+      - BFO:0000050 some UBERON:0002113 UBERON:0002113
     label: Metazoan
 
 curie_map:
