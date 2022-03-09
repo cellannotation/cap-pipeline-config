@@ -19,11 +19,13 @@ jobs:
     - name: schema validation
       id: validation
       run: |
-        yamale -s schema.yaml config/prod/neo4j2owl-config.yaml | tee validation.report
-        echo ::set-output name=report::$(tail -n +3 validation.report)
+        yamale -s schema.yaml config/prod/neo4j2owl-config.yaml | tee output.md
+        tail -n +3 output > validation.report
+        echo ::set-output name=report::$(cat validation.report)
     - name: Prepare schema validator comment
       if: contains(steps.validation.outputs.report, 'Error')
       run: |
+        pwd
         "echo \"<details>\n <summary> config/prod/neo4j2owl-config.yaml file failed the schema validation check </summary> \n\" > comment.md; cat validation.report >> comment.md"
         exit 1
     - name: Post comment validator comment
