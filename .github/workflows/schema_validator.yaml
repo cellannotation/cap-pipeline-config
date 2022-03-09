@@ -6,8 +6,6 @@ on:
     branches: [ main ]
     paths:
       - 'config/prod/neo4j2owl-config.yaml'
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 jobs:
   yaml-schema-validation:
@@ -19,11 +17,9 @@ jobs:
     - name: schema validation
       id: validation
       run: |
-        pwd
         yamale -s schema.yaml config/prod/neo4j2owl-config.yaml | tee output
-        tail -n +3 output > validation.report
+        tail -n +4 output > validation.report
         echo ::set-output name=report::$(cat validation.report)
-        ls -l
     - name: Prepare schema validator comment
       if: contains(steps.validation.outputs.report, 'Error')
       run: |
