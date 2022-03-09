@@ -27,7 +27,7 @@ jobs:
     - name: Prepare schema validator comment
       if: contains(steps.validation.outputs.report, 'Error')
       run: |
-        cat validator comment
+        cat validation.report
         pwd
         ls -l
         "echo \"<details>\n <summary> config/prod/neo4j2owl-config.yaml file failed the schema validation check </summary> \n\" > comment.md; cat validation.report >> comment.md"
