@@ -9,6 +9,5 @@ CONSTRUCT {
 }
 WHERE 
 {
-
       ?s inSubset: <http://purl.obolibrary.org/obo/uberon/core#organ_slim> .
 }
