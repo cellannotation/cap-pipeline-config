@@ -1,1 +1,0 @@
-docker-compose restart vfb-integration-api
