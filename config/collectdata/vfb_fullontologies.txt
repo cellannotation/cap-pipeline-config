@@ -1,2 +1,3 @@
-https://raw.githubusercontent.com/obophenotype/uberon/v2021-11-28/uberon-full.owl
-https://raw.githubusercontent.com/obophenotype/cell-ontology/master/cl.owl
+http://purl.obolibrary.org/obo/uberon/uberon-base.owl
+http://purl.obolibrary.org/obo/cl/cl-base.owl
+http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
