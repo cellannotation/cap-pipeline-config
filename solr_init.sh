@@ -9,10 +9,10 @@
 
 
 echo "Indexing ontology collection in server localhost:8993"
-curl --location --request POST 'http://localhost:8993/solr/ontology/update/json?commit=true' --header 'Content-Type: application/json' --data-binary '@solr.json'
+bash solr_index.sh
 
 echo "Configuring ontology schema in server localhost:8993"
 bash solr_config.sh -h localhost -p 8993
 
 echo "Re-indexing ontology collection in server localhost:8993"
-curl --location --request POST 'http://localhost:8993/solr/ontology/update/json?commit=true' --header 'Content-Type: application/json' --data-binary '@solr.json'
+bash solr_index.sh
