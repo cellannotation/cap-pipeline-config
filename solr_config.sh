@@ -13,7 +13,7 @@
 set -e
 
 core_name=ontology
-autocomplete_single_val_fields=(label unique_facets)
+autocomplete_single_val_fields=(label)
 autocomplete_multi_val_fields=(synonym facets_annotation)
 
 autocomplete_fields=("${autocomplete_single_val_fields[@]}" "${autocomplete_multi_val_fields[@]}")
