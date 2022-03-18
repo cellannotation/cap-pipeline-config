@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # This script updates ontology schema with ngram based new search fields. These new text fields has naming: *_autosuggest_e
 # and *_autosuggest_wse, and enable partial matching capability. To run this script, your solr should be up and running
