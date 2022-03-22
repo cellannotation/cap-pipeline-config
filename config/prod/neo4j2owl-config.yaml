@@ -17,6 +17,9 @@ neo_node_labelling:
   - classes:
       - NCBITaxon:33208
     label: Metazoan
+  - classes:
+      - UBERON:0010000
+    label: Multicellular_anatomical_structure
 
 curie_map:
   GITHUB: https://github.com/
