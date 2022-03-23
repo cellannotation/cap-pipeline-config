@@ -1,3 +1,7 @@
+# ACTION: 
+#  Generate list of IRIs and labels from UBERON organ_slim and output in JSON format
+#  Output will be used to boost search results in Cell Annotation Platform (CAP) 
+
 import sys
 from ruamel.yaml import YAML
 from SPARQLWrapper import SPARQLWrapper, JSON
