@@ -1,0 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX efo: <http://www.ebi.ac.uk/efo/>
+
+CONSTRUCT {
+	?s <http://n2o.neo/property/nodeLabel> "Assay" .
+}
+WHERE {
+VALUES ?s
+{efo:EFO_0009901 #10x 3' v1
+efo:EFO_0009899 #10x 3' v2
+efo:EFO_0009922 #10x 3' v3
+efo:EFO_0008992 #MERFISH
+efo:EFO_0008853 #Patch-seq
+efo:EFO_0030059 #10x multiome
+efo:EFO_0030060 #mCT-seq
+efo:EFO_0008930 #Smart-seq
+efo:EFO_0010961 #Visium Spatial Gene Expression
+  }
+}
