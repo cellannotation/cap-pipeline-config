@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# generate_organ_tags.py v1.0.0
+
 # ACTION: 
 #  Generate list of IRIs and labels from UBERON organ_slim and output in JSON format
 #  Output will be used to boost search results in Cell Annotation Platform (CAP) 
@@ -35,17 +38,17 @@ ret = sparql.queryAndConvert()
 # for r in ret["results"]["bindings"]:
 #    print(r)
 
-s = []
-for r in ret["results"]["bindings"]:
-        s.append(r)
+queryOutput = []
+for line in ret["results"]["bindings"]:
+        queryOutput.append(line)
 
 organs = []
 i = 0
-for n in s:
-    a = s[i]['x']['value'].replace("_", ":")
-    a = a.partition('http://purl.obolibrary.org/obo/')[-1]
-    b = s[i]['xLabel']['value'].replace(" ", "_")
-    organs.append((a, b))
+for n in queryOutput:
+    IRI = queryOutput[i]['x']['value'].replace("_", ":")
+    IRI = IRI.partition('http://purl.obolibrary.org/obo/')[-1]
+    label = queryOutput[i]['xLabel']['value'].replace(" ", "_")
+    organs.append((IRI, label))
     i += 1
 
 inp = """\
