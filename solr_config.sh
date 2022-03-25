@@ -41,7 +41,7 @@ curl -X POST -H 'Content-type:application/json' --data-binary "{
        \"filters\":[{\"class\":\"solr.LowerCaseFilterFactory\" },
                    {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\" },
                    {\"class\":\"solr.EdgeNGramFilterFactory\",
-                   \"minGramSize\":\"1\",
+                   \"minGramSize\":\"3\",
                    \"maxGramSize\":\"35\"}]
     },
     \"queryAnalyzer\":{
@@ -65,12 +65,39 @@ curl -X POST -H 'Content-type:application/json' --data-binary "{
        \"filters\":[{\"class\":\"solr.LowerCaseFilterFactory\" },
                    {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\" },
                    {\"class\":\"solr.EdgeNGramFilterFactory\",
-                   \"minGramSize\":\"1\",
+                   \"minGramSize\":\"3\",
                    \"maxGramSize\":\"35\"}]
     },
     \"queryAnalyzer\":{
       \"tokenizer\":{
          \"class\":\"solr.WhitespaceTokenizerFactory\" },
+       \"filters\":[{\"class\":\"solr.LowerCaseFilterFactory\" },
+                   {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\" }]
+    }
+  }
+}" http://$host:$port/solr/$core_name/schema --show-error --fail
+
+echo "Adding textCustomEdge field type"
+curl -X POST -H 'Content-type:application/json' --data-binary "{
+  \"add-field-type\":{
+    \"name\":\"textCustomEdge\",
+    \"class\":\"solr.TextField\",
+    \"indexAnalyzer\":{
+      \"tokenizer\":{
+         \"class\":\"solr.PatternTokenizerFactory\",
+         \"pattern\":\"[-–_ ]\" },
+       \"filters\":[{\"class\":\"solr.WordDelimiterGraphFilterFactory\",
+                    \"generateNumberParts\":\"0\"},
+                   {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\"},
+                   {\"class\":\"solr.LowerCaseFilterFactory\"},
+                   {\"class\":\"solr.EdgeNGramFilterFactory\",
+                   \"minGramSize\":\"3\",
+                   \"maxGramSize\":\"35\"}]
+    },
+    \"queryAnalyzer\":{
+      \"tokenizer\":{
+         \"class\":\"solr.PatternTokenizerFactory\",
+         \"pattern\":\"[-–_ ]\" },
        \"filters\":[{\"class\":\"solr.LowerCaseFilterFactory\" },
                    {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\" }]
     }
@@ -96,6 +123,17 @@ for field in "${autocomplete_single_val_fields[@]}"; do
     \"add-field\":{
        \"name\":\"${field}_autosuggest_wse\",
        \"type\":\"textWhitespaceEdge\",
+       \"indexed\":true,
+       \"stored\":true,
+       \"multiValued\":false
+     }
+  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+
+  echo "Adding auto complete field ce: ${field}"
+  curl -X POST -H 'Content-type:application/json' --data-binary "{
+    \"add-field\":{
+       \"name\":\"${field}_autosuggest_ce\",
+       \"type\":\"textCustomEdge\",
        \"indexed\":true,
        \"stored\":true,
        \"multiValued\":false
@@ -131,6 +169,17 @@ for field in "${autocomplete_multi_val_fields[@]}"; do
      }
   }" http://$host:$port/solr/$core_name/schema --show-error --fail
 
+  echo "Adding auto complete field ce: ${field}"
+  curl -X POST -H 'Content-type:application/json' --data-binary "{
+    \"add-field\":{
+       \"name\":\"${field}_autosuggest_ce\",
+       \"type\":\"textCustomEdge\",
+       \"indexed\":true,
+       \"stored\":true,
+       \"multiValued\":true
+     }
+  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+
 # end for
 done
 
@@ -153,6 +202,15 @@ for field in "${autocomplete_fields[@]}"; do
     \"add-copy-field\":{
     \"source\":\"${field}\",
     \"dest\":\"${field}_autosuggest_wse\"}
+  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+
+  echo "Copying auto complete field ce: ${field}"
+  # Now configure with the Schema API
+  # Modify this with your desired schema configuration
+  curl -X POST -H 'Content-type:application/json' --data-binary "{
+    \"add-copy-field\":{
+    \"source\":\"${field}\",
+    \"dest\":\"${field}_autosuggest_ce\"}
   }" http://$host:$port/solr/$core_name/schema --show-error --fail
 
 # end for
