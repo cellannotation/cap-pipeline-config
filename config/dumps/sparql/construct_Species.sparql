@@ -1,10 +1,6 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
 CONSTRUCT {
 	?s <http://n2o.neo/property/nodeLabel> "Species" .
 }
 WHERE {
- ?s <http://purl.obolibrary.org/obo/ncbitaxon#has_rank>  <http://purl.obolibrary.org/obo/NCBITaxon_species>. ?s rdfs:label ?label
+ ?s <http://purl.obolibrary.org/obo/ncbitaxon#has_rank>  <http://purl.obolibrary.org/obo/NCBITaxon_species>.
 }
