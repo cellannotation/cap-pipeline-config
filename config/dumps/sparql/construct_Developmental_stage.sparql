@@ -1,0 +1,8 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+	?s <http://n2o.neo/property/nodeLabel> "Developmental_stage" .
+}
+WHERE {
+ ?s rdfs:subClassOf  <http://purl.obolibrary.org/obo/UBERON_0000105>.
+}
