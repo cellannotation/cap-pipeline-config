@@ -1,0 +1,10 @@
+PREFIX inSubset: <http://www.geneontology.org/formats/oboInOwl#inSubset>
+
+
+CONSTRUCT {
+  ?s <http://n2o.neo/property/nodeLabel> "Race" .
+}
+WHERE 
+{
+      ?s inSubset: <http://purl.obolibrary.org/obo/NCIT_C128689> .
+}
