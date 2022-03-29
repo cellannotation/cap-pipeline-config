@@ -6,7 +6,7 @@
 #  Output will be used to filter and/or boost search results in Cell Annotation Platform (CAP) 
 
 import sys
-from ruamel.yaml import YAML
+import yaml
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 sparql = SPARQLWrapper(
