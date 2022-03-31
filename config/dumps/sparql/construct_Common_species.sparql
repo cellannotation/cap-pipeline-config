@@ -1,4 +1,3 @@
-PREFIX http: <http://www.w3.org/2011/http#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 
 CONSTRUCT {
