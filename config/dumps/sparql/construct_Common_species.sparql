@@ -15,8 +15,8 @@ VALUES ?s
 	obo:NCBITaxon_6239 # C. elegans (nematode worm),
 	obo:NCBITaxon_9031 # Gallus domesticus (chicken),
 	obo:NCBITaxon_8296 # Ambystoma mexicanum (axolotl),
-    obo:NCBITaxon_8355 # Xenopus laevis (clawed frog),
-    obo:NCBITaxon_8364 # Xenopus tropicalis (western clawed frog)
+    	obo:NCBITaxon_8355 # Xenopus laevis (clawed frog),
+    	obo:NCBITaxon_8364 # Xenopus tropicalis (western clawed frog)
 }
 }
 
