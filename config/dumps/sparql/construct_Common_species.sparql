@@ -1,3 +1,4 @@
+PREFIX http: <http://www.w3.org/2011/http#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 
 CONSTRUCT {
@@ -6,6 +7,17 @@ CONSTRUCT {
 WHERE {
     ?s <http://purl.obolibrary.org/obo/ncbitaxon#has_rank>  <http://purl.obolibrary.org/obo/NCBITaxon_species>.
 VALUES ?s
-{obo:NCBITaxon_9606 obo:NCBITaxon_10090 obo:NCBITaxon_7955 obo:NCBITaxon_7227 obo:NCBITaxon_10116 obo:NCBITaxon_6239 obo:NCBITaxon_9031 obo:NCBITaxon_8296
+{
+	obo:NCBITaxon_9606 # Homo sapiens,
+	obo:NCBITaxon_10090 # Mus musculus (mouse),
+	obo:NCBITaxon_7955 # Danio rerio (zebrafish),
+	obo:NCBITaxon_7227 # Drosophila melanogaster (fruit fly),
+	obo:NCBITaxon_10116 # Rattus norvegicus (rat),
+	obo:NCBITaxon_6239 # C. elegans (nematode worm),
+	obo:NCBITaxon_9031 # Gallus domesticus (chicken),
+	obo:NCBITaxon_8296 # Ambystoma mexicanum (axolotl),
+    obo:NCBITaxon_8355 # Xenopus laevis (clawed frog),
+    obo:NCBITaxon_8364 # Xenopus tropicalis (western clawed frog)
 }
 }
+
