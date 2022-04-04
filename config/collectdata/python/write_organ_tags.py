@@ -5,9 +5,10 @@
 #  Generate list of IRIs and labels from UBERON organ_slim and output in JSON format to YAML file
 #  Output will be used to filter and/or boost search results in Cell Annotation Platform (CAP)
 
-# INSTRUCTION:
+# INSTRUCTIONS:
 #  Organ IRIs and labels will be directed to a file named neo4j2owl-config.yaml by default
-#  To direct output to a differnt file, execute by running python write_organ_tags.py -f fileName
+#  To direct output to a differnt file, execute by running:
+#   python write_organ_tags.py -f fileName
 #   Replace 'fileName' with name of YAML file
 
 import argparse
@@ -73,6 +74,5 @@ for organ in organs:
     yaml_config['neo_node_labelling'].append(a)
 
 # export populated dictionary to file
-# ? can neo4j2owl-config.yaml point to this file?
 with open(fileName, 'w') as file:
     documents = yaml.dump(yaml_config, file)
