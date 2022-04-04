@@ -2,12 +2,26 @@
 # generate_organ_tags.py v1.0.0
 
 # ACTION:
-#  Generate list of IRIs and labels from UBERON organ_slim and output in JSON format
+#  Generate list of IRIs and labels from UBERON organ_slim and output in JSON format to YAML file
 #  Output will be used to filter and/or boost search results in Cell Annotation Platform (CAP)
 
+# INSTRUCTION:
+#  Organ IRIs and labels will be directed to a file named neo4j2owl-config.yaml by default
+#  To direct output to a differnt file, execute by running python write_organ_tags.py -f fileName
+#   Replace 'fileName' with name of YAML file
+
+import argparse
 import sys
 import ruamel.yaml
 from SPARQLWrapper import SPARQLWrapper, JSON
+
+parser = argparse.ArgumentParser(description = 'set destination YAML file for query output')
+
+parser.add_argument('-f', '--file', default = 'neo4j2owl-config.yaml', help = 'destination file')
+
+args = parser.parse_args()
+
+fileName =args.file
 
 sparql = SPARQLWrapper(
     "https://ubergraph.apps.renci.org/sparql"
@@ -48,17 +62,17 @@ for n in queryOutput:
 yaml = ruamel.yaml.YAML()
 yaml.indent(sequence=4, offset=2)
 
-with open('neo4j2owl-config.yaml') as file:
+with open(fileName) as file:
     yaml_config = yaml.load(file)
 
 # generate dictionary and populate with organ IRIs and labels
 # organ_labels = {"neo_node_labelling": []}
 for organ in organs:
-#   print(organ)
+    print(organ)
     a = {'classes': organ[0], 'label': organ[1]}
     yaml_config['neo_node_labelling'].append(a)
 
 # export populated dictionary to file
 # ? can neo4j2owl-config.yaml point to this file?
-with open('neo4j2owl-config.yaml', 'w') as file:
+with open(fileName, 'w') as file:
     documents = yaml.dump(yaml_config, file)
