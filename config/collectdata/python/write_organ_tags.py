@@ -22,7 +22,7 @@ parser.add_argument('-f', '--file', default = 'neo4j2owl-config.yaml', help = 'd
 
 args = parser.parse_args()
 
-fileName =args.file
+fileName = args.file
 
 sparql = SPARQLWrapper(
     "https://ubergraph.apps.renci.org/sparql"
