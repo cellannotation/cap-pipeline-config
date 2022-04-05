@@ -56,6 +56,7 @@ organs = []
 for n in queryOutput:
     IRI = n['x']['value'].replace("_", ":")
     IRI = IRI.partition('http://purl.obolibrary.org/obo/')[-1]
+    IRI = "cell and 'part of' some " + IRI
     label = n['xLabel']['value'].replace(" ", "_")
     organs.append((IRI, label))
 
