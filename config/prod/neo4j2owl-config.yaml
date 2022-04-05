@@ -20,6 +20,9 @@ neo_node_labelling:
   - classes:
       - UBERON:0010000
     label: Multicellular_anatomical_structure
+  - classes:
+      - UBERON:0000105
+    label: Developmental_stage
 
 curie_map:
   GITHUB: https://github.com/
