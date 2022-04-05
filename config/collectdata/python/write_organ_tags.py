@@ -8,8 +8,8 @@
 # INSTRUCTIONS:
 #  Organ IRIs and labels will be directed to a file named neo4j2owl-config.yaml by default
 #  To direct output to a differnt file, execute by running:
-#   python write_organ_tags.py -f fileName
-#   Replace 'fileName' with name of YAML file
+#   python write_organ_tags.py -f file_name
+#   Replace 'file_name' with name of YAML file
 
 import argparse
 import sys
@@ -22,7 +22,7 @@ parser.add_argument('-f', '--file', default = 'neo4j2owl-config.yaml', help = 'd
 
 args = parser.parse_args()
 
-fileName = args.file
+file_name = args.file
 
 sparql = SPARQLWrapper(
     "https://ubergraph.apps.renci.org/sparql"
@@ -63,16 +63,15 @@ for n in queryOutput:
 yaml = ruamel.yaml.YAML()
 yaml.indent(sequence=4, offset=2)
 
-with open(fileName) as file:
+with open(file_name) as file:
     yaml_config = yaml.load(file)
 
 # generate dictionary and populate with organ IRIs and labels
 # organ_labels = {"neo_node_labelling": []}
 for organ in organs:
-    print(organ)
     a = {'classes': organ[0], 'label': organ[1]}
     yaml_config['neo_node_labelling'].append(a)
 
 # export populated dictionary to file
-with open(fileName, 'w') as file:
+with open(file_name, 'w') as file:
     documents = yaml.dump(yaml_config, file)
