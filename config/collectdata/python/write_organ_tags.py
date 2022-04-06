@@ -2,14 +2,11 @@
 # generate_organ_tags.py v1.0.0
 
 # ACTION:
-#  Generate list of IRIs and labels from UBERON organ_slim and output in JSON format to YAML file
+#  Generate list of IRIs and labels from UBERON organ_slim and send output to YAML file
 #  Output will be used to filter and/or boost search results in Cell Annotation Platform (CAP)
 
 # INSTRUCTIONS:
-#  Organ IRIs and labels will be directed to a file named neo4j2owl-config.yaml by default
-#  To direct output to a differnt file, execute by running:
-#   python write_organ_tags.py -f file_name
-#   Replace 'file_name' with name of YAML file
+#  
 
 import argparse
 import sys
@@ -18,7 +15,10 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 parser = argparse.ArgumentParser(description = 'set destination YAML file for query output')
 
-parser.add_argument('-f', '--file', default = 'neo4j2owl-config.yaml', help = 'destination file')
+parser.add_argument('-f', '--file', default = 'neo4j2owl-config.yaml', help = '''
+    Use this option to indicate destination file for organ cell DL queries and semantic labels. By default, output
+    is sent to a file named neo4j2owl-config.yaml.
+    ''')
 
 args = parser.parse_args()
 
@@ -51,7 +51,8 @@ ret = sparql.queryAndConvert()
 queryOutput = []
 for line in ret["results"]["bindings"]:
     queryOutput.append(line)
-# generate list of IRIs and organ labels
+
+# generate list of organ cell DL queries and semantic labels
 organs = []
 for n in queryOutput:
     IRI = n['x']['value'].replace("_", ":")
