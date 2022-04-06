@@ -55,8 +55,8 @@ for line in ret["results"]["bindings"]:
 # generate list of organ cell DL queries and semantic labels
 organs = []
 for n in queryOutput:
-    IRI = n['x']['value'].replace("_", ":")
-    CURIE = IRI.partition('http://purl.obolibrary.org/obo/')[-1]
+    CURIE = n['x']['value'].replace("_", ":")
+    CURIE = CURIE.partition('http://purl.obolibrary.org/obo/')[-1]
     dl_query = "cell and 'part of' some " + CURIE
     label = n['xLabel']['value'].replace(" ", "_")
     organs.append((dl_query, label))
