@@ -2,7 +2,7 @@
 # generate_organ_tags.py v1.0.0
 
 # ACTION:
-#  Generate list of IRIs and labels from UBERON organ_slim and send output to YAML file
+#  Generate list of organ cell DL queries and labels derived from UBERON organ_slim and send output to YAML file
 #  Output will be used to filter and/or boost search results in Cell Annotation Platform (CAP)
 
 # INSTRUCTIONS:
