@@ -56,10 +56,10 @@ for line in ret["results"]["bindings"]:
 organs = []
 for n in queryOutput:
     IRI = n['x']['value'].replace("_", ":")
-    IRI = IRI.partition('http://purl.obolibrary.org/obo/')[-1]
-    IRI = "cell and 'part of' some " + IRI
+    CURIE = IRI.partition('http://purl.obolibrary.org/obo/')[-1]
+    dl_query = "cell and 'part of' some " + CURIE
     label = n['xLabel']['value'].replace(" ", "_")
-    organs.append((IRI, label))
+    organs.append((dl_query, label))
 
 # ramuel.yaml initialization and configuration
 yaml = ruamel.yaml.YAML()
@@ -68,7 +68,7 @@ yaml.indent(sequence=4, offset=2)
 with open(file_name) as file:
     yaml_config = yaml.load(file)
 
-# generate dictionary and populate with organ IRIs and labels
+# generate dictionary and populate with organ cell DL queries and sematic labels
 # organ_labels = {"neo_node_labelling": []}
 for organ in organs:
     a = {'classes': organ[0], 'label': organ[1]}
