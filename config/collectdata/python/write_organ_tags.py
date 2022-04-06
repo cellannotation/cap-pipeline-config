@@ -5,9 +5,6 @@
 #  Generate list of organ cell DL queries and labels derived from UBERON organ_slim and send output to YAML file
 #  Output will be used to filter and/or boost search results in Cell Annotation Platform (CAP)
 
-# INSTRUCTIONS:
-#  
-
 import argparse
 import sys
 import ruamel.yaml
