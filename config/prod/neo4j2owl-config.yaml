@@ -23,6 +23,9 @@ neo_node_labelling:
   - classes:
       - CL:0000548
     label: Animal_cell
+  - classes:
+      - UBERON:0000105
+    label: Developmental_stage
 
 curie_map:
   GITHUB: https://github.com/

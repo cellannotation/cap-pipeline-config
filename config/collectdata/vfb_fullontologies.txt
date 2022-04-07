@@ -1,3 +1,5 @@
 http://purl.obolibrary.org/obo/uberon/uberon-base.owl
 http://purl.obolibrary.org/obo/cl/cl-base.owl
 http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
+http://purl.obolibrary.org/obo/hancestro/hancestro.owl
+https://www.ebi.ac.uk/efo/efo-base.owl
