@@ -54,7 +54,7 @@ organs = []
 for n in queryOutput:
     CURIE = n['x']['value'].replace("_", ":")
     CURIE = CURIE.partition('http://purl.obolibrary.org/obo/')[-1]
-    dl_query = "cell and 'part of' some " + CURIE
+    dl_query = "CL:0000001 and BFO:0000050 some " + CURIE
     label = n['xLabel']['value'].replace(" ", "_")
     organs.append((dl_query, label))
 
