@@ -23,6 +23,9 @@ neo_node_labelling:
   - classes:
       - UBERON:0000105
     label: Developmental_stage
+  - classes:
+      - HANCESTRO:0004 
+    label: Race
 
 curie_map:
   GITHUB: https://github.com/
