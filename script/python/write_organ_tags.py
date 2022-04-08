@@ -54,7 +54,7 @@ organs = []
 for n in queryOutput:
     CURIE = n['x']['value'].replace("_", ":")
     CURIE = CURIE.partition('http://purl.obolibrary.org/obo/')[-1]
-    dl_query = "CL:0000001 and BFO:0000050 some " + CURIE
+    dl_query = "CL:0000000 and BFO:0000050 some " + CURIE
     label = n['xLabel']['value'].replace(" ", "_")
     organs.append((dl_query, label))
 
@@ -68,7 +68,7 @@ with open(file_name) as file:
 # generate dictionary and populate with organ cell DL queries and sematic labels
 # organ_labels = {"neo_node_labelling": []}
 for organ in organs:
-    a = {'classes': organ[0], 'label': organ[1]}
+    a = {'classes': [organ[0]], 'label': organ[1]}
     yaml_config['neo_node_labelling'].append(a)
 
 # export populated dictionary to file
