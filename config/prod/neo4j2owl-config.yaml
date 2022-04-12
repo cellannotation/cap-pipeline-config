@@ -55,6 +55,7 @@ curie_map:
   SO: http://purl.obolibrary.org/obo/SO_
   OBI: http://purl.obolibrary.org/obo/OBI_
   PCL: http://purl.obolibrary.org/obo/PCL_
+  HANCESTRO: http://purl.obolibrary.org/obo/HANCESTRO_
 
 filters:
   solr:
