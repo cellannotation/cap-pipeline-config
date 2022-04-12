@@ -16,7 +16,7 @@
           "items": {
             "type": "string"
           },
-          "description": "A list of Manchester syntax class expressions in which OWL entities are expressed as curies."
+          "description": "A list of Manchester syntax class expressions in which OWL entities are expressed as CURIEs."
         },
         "label": {
           "description": "Semantic tag name",
@@ -54,7 +54,7 @@
       ]
     },
     "relation_type_threshold": {
-      "description": "neo2owl attempts to consistently cast annotation value types (property value types).  To do this is uses the threshold set here (more details TBA).",
+      "description": "neo2owl attempts to consistently cast annotation value types (property value types).  To do this it uses the threshold set here (more details TBA).",
       "type": "number"
     },
     "represent_values_and_annotations_as_json": {
