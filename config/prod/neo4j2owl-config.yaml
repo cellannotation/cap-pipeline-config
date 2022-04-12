@@ -29,6 +29,9 @@ neo_node_labelling:
   - classes:
       - HANCESTRO:0004 
     label: Race
+  - classes:
+      - MONDO:0000001
+    label: Disease
 
 curie_map:
   GITHUB: https://github.com/
@@ -56,6 +59,7 @@ curie_map:
   OBI: http://purl.obolibrary.org/obo/OBI_
   PCL: http://purl.obolibrary.org/obo/PCL_
   HANCESTRO: http://purl.obolibrary.org/obo/HANCESTRO_
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
 
 filters:
   solr:
