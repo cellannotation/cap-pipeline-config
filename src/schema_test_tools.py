@@ -1,11 +1,10 @@
 import json
 from jsonschema import Draft4Validator, RefResolver, SchemaError
-import warnings
-import subprocess
 import os
 import glob
 from ruamel.yaml import YAML, YAMLError
 import warnings
+from pathlib import Path
 
 
 def get_json_from_file(filename):
@@ -80,7 +79,7 @@ def recurse_through_errors(es, level=0):
             recurse_through_errors(e.context, level=level)
 
 
-def test_local(path_to_schema_dir, schema_file, test_dir, load_yaml=True):
+def test_local(path_to_schema_dir, schema_file, path_to_test_dir, load_yaml=True):
     """Tests all instances in a test_folder against a single schema.
     Assumes all schema files in single dir.
     Assumes all *.json files in the test_dir should validate against the schema.
@@ -93,14 +92,23 @@ def test_local(path_to_schema_dir, schema_file, test_dir, load_yaml=True):
     if load_yaml:
         file_ext = 'yaml'
         loader = get_yaml_from_file
-#    os.chdir(path_to_schema_dir)
-    pwd = subprocess.check_output('pwd').decode("utf-8").rstrip()
-    # Removed resolver as this was causing failure of local path resolution.
-    # base_uri = "file://" + pwd + "/" + path_to_schema_dir
-    sv = get_validator(path_to_schema_dir + '/' + schema_file) #, base_uri)
-    test_files = glob.glob(pathname=test_dir + '/*.' + file_ext)
-    # print("Found test files: %s in %s" % (str(test_files), test_dir))
-    for instance_file in test_files:
-        i = loader(instance_file)
-        print("Testing: %s" % instance_file)
-        validate(sv, i)
+    # Getting script directory, schema directory and test directory
+    script_folder = Path(os.path.dirname(os.path.realpath(__file__)))
+    schema_dir = Path(os.path.dirname(path_to_schema_dir))
+    test_dir = Path(os.path.dirname(path_to_test_dir))
+    # Checking whether schema directory and test directory are in the parent directory of script directory
+    if not os.path.exists(os.path.join(script_folder.parent, schema_dir)):
+        raise Exception("Please provide valid path_to_schema_dir")
+    if not os.path.exists(os.path.join(script_folder.parent, test_dir)):
+        raise Exception("Please provide valid path_to_test_dir")
+    else:
+        sv = get_validator(os.path.join(script_folder.parent, schema_dir, schema_file))
+        test_dir_files = ''.join(['/*.', file_ext])
+        test_files = glob.glob(pathname=os.path.join(script_folder.parent, test_dir) + test_dir_files)
+        # print("Found test files: %s in %s" % (str(test_files), path_to_test_dir))
+        for instance_file in test_files:
+            print(instance_file)
+            i = loader(instance_file)
+            print("Testing: %s" % instance_file)
+            validate(sv, i)
+
