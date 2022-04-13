@@ -2,9 +2,9 @@ version: '3.3'
 
 services:
   vfb-triplestore:
-    #image: matentzn/vfb-pipeline-triplestore
+    image: matentzn/vfb-pipeline-triplestore
     # use this image if you are using a mac with m1 chip
-    image: eclipse/rdf4j-workbench:arm64v8-3.5.0
+    # image: eclipse/rdf4j-workbench:arm64v8-3.5.0
     container_name: triplestore
     environment:
       - JVM_PARAMS=-Xms1G -Xmx5G
