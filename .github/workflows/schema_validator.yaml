@@ -23,7 +23,7 @@ jobs:
       run: |
         python src/test_neo2owl_config.py
     - name: Prepare schema validator comment
-      if: ${{ failure() }}
+      if: failure()
       run: |
         echo "config/prod/neo4j2owl-config.yaml file failed the schema validation check   " > comment.md; cat validation.report >> comment.md
     - name: install Yamale
@@ -37,7 +37,7 @@ jobs:
     - name: Prepare DL validator comment
       if: contains(steps.validation.outputs.report, 'Error')
       run: |
-        echo "<details>   <summary> config/prod/neo4j2owl-config.yaml file failed the regex based DL validation check </summary> </details>   " > comment.md; cat validation.report >> comment.md
+        echo "<details>   <summary> config/prod/neo4j2owl-config.yaml file failed the regex based DL validation check </summary>   " > comment.md; cat validation.report >> comment.md
         exit 1
     - name: Prepare success comment
       run: |
