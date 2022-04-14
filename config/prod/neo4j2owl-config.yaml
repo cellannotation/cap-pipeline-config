@@ -21,7 +21,7 @@ neo_node_labelling:
       - UBERON:0010000
     label: Multicellular_anatomical_structure
   - classes:
-      - CL_0000548
+      - CL:0000548
     label: Animal_cell
   - classes:
       - UBERON:0000105
