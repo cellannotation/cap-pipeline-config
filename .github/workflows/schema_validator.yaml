@@ -12,18 +12,30 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.8
+    - name: Schema validation
+      id: schema
+      run: |
+        python src/test_neo2owl_config.py
+    - name: Prepare schema validator comment
+      if: ${{ failure() }}
+      run: |
+        echo "<details>   <summary> config/prod/neo4j2owl-config.yaml file failed the schema validation check </summary>   " > comment.md; cat validation.report >> comment.md
     - name: install Yamale
       run: brew install yamale
-    - name: schema validation
+    - name: Regex based DL validation
       id: validation
       run: |
         yamale -s schema.yaml config/prod/neo4j2owl-config.yaml | tee output
         tail -n +4 output > validation.report
         echo ::set-output name=report::$(cat output)
-    - name: Prepare schema validator comment
+    - name: Prepare DL validator comment
       if: contains(steps.validation.outputs.report, 'Error')
       run: |
-        echo "<details>   <summary> config/prod/neo4j2owl-config.yaml file failed the schema validation check </summary>   " > comment.md; cat validation.report >> comment.md
+        echo "<details>   <summary> config/prod/neo4j2owl-config.yaml file failed the regex based DL validation check </summary>   " > comment.md; cat validation.report >> comment.md
         exit 1
     - name: Post comment validator comment
       if: ${{ failure() }}
