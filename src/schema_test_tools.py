@@ -1,4 +1,6 @@
 import json
+import sys
+
 from jsonschema import Draft4Validator, RefResolver, SchemaError
 import os
 import glob
@@ -64,7 +66,8 @@ def validate(validator, instance):
     else:
         es = validator.iter_errors(instance)
         recurse_through_errors(es)
-        print("Validation Fails")
+        # print("Validation Fails")
+        sys.exit("Validation Fails")
         return False
 
 
@@ -108,7 +111,7 @@ def test_local(path_to_schema_dir, schema_file, path_to_test_dir, load_yaml=True
         sv = get_validator(os.path.join(script_folder.parent, schema_dir, schema_file))
         test_dir_files = ''.join(['/*.', file_ext])
         test_files = glob.glob(pathname=os.path.join(script_folder.parent, test_dir) + test_dir_files)
-        print("Found test files: %s in %s" % (str(test_files), path_to_test_dir))
+        # print("Found test files: %s in %s" % (str(test_files), path_to_test_dir))
         for instance_file in test_files:
             print(instance_file)
             i = loader(instance_file)
