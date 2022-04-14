@@ -10,10 +10,13 @@ from pathlib import Path
 def get_json_from_file(filename):
     """Loads json from a file.
     """
-    f = open(filename, 'r')
-    fc = f.read()
-    f.close()
+    with open(filename, 'r') as f:
+        try:
+            fc = f.read()
+        except Exception as exc:
+            warnings.warn('Failed to open ' + filename + ' as JSON')
     return json.loads(fc)
+
 
 def get_yaml_from_file(filename):
     """Loads YAML from a file.
@@ -105,10 +108,9 @@ def test_local(path_to_schema_dir, schema_file, path_to_test_dir, load_yaml=True
         sv = get_validator(os.path.join(script_folder.parent, schema_dir, schema_file))
         test_dir_files = ''.join(['/*.', file_ext])
         test_files = glob.glob(pathname=os.path.join(script_folder.parent, test_dir) + test_dir_files)
-        # print("Found test files: %s in %s" % (str(test_files), path_to_test_dir))
+        print("Found test files: %s in %s" % (str(test_files), path_to_test_dir))
         for instance_file in test_files:
             print(instance_file)
             i = loader(instance_file)
             print("Testing: %s" % instance_file)
             validate(sv, i)
-
