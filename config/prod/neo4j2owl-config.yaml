@@ -22,6 +22,7 @@ neo_node_labelling:
     label: Multicellular_anatomical_structure
   - classes:
       - CL:0000548
+    label: Animal_cell
   - classes:
       - UBERON:0000105
     label: Developmental_stage
