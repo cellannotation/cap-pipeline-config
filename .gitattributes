@@ -1,1 +1,1 @@
-*.{ru,sh} linguist-detectable=false
+*.py linguist-vendored=false
