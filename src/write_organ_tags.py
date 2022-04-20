@@ -7,7 +7,7 @@
 
 import argparse
 import ruamel.yaml
-from config_autogenerate_utils import config_autogenerate_utils
+from config_autogenerate_utils import utils
 
 
 def generate_organ_cells(output):
@@ -53,7 +53,7 @@ WHERE
 }
     """
 
-query_output = config_autogenerate_utils.run_query(organ_query)
+query_output = utils.run_query(organ_query)
 
 # generate list of organ cell DL queries and semantic labels
 organ_list = generate_organ_cells(query_output)
@@ -65,7 +65,7 @@ yaml.indent(sequence=4, offset=2)
 with open(file_name) as file:
     yaml_config = yaml.load(file)
 
-yaml_config['neo_node_labelling'] = config_autogenerate_utils.update_neo_node_labelling(yaml_config['neo_node_labelling'], organ_list)
+yaml_config['neo_node_labelling'] = utils.update_neo_node_labelling(yaml_config['neo_node_labelling'], organ_list)
 
 # export populated dictionary to file
 with open(file_name, 'w') as file:
