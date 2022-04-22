@@ -7,7 +7,8 @@
 
 import argparse
 import ruamel.yaml
-from config_autogenerate_utils import utils
+import utils.config_autogenerate_utils as utils
+# from config_autogenerate_utils import utils
 
 
 def generate_organ_cells(output):

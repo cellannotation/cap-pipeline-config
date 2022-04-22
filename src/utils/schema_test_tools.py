@@ -1,6 +1,5 @@
 import json
 import sys
-
 from jsonschema import Draft4Validator, RefResolver, SchemaError
 import os
 import glob

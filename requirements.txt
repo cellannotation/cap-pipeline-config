@@ -1,4 +1,4 @@
 ruamel.yaml==0.17.21
 jsonschema==4.4.0
-SPARQLWrapper==1.8.5
-cap-pipeline-config-utils==0.0.1
+SPARQLWrapper==2.0.0
+# cap-pipeline-config-utils==0.0.1
