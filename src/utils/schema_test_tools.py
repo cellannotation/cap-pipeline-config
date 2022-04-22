@@ -1,6 +1,5 @@
 import json
 import sys
-
 from jsonschema import Draft4Validator, RefResolver, SchemaError
 import os
 import glob
@@ -99,7 +98,7 @@ def test_local(path_to_schema_dir, schema_file, path_to_test_dir, load_yaml=True
         file_ext = 'yaml'
         loader = get_yaml_from_file
     # Getting script directory, schema directory and test directory
-    script_folder = Path(os.path.dirname(os.path.realpath(__file__)))
+    script_folder = Path(os.path.dirname(os.path.realpath(__file__))).parent
     schema_dir = Path(os.path.dirname(path_to_schema_dir))
     test_dir = Path(os.path.dirname(path_to_test_dir))
     # Checking whether schema directory and test directory are in the parent directory of script directory
