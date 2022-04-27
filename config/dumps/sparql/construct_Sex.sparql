@@ -6,6 +6,6 @@ CONSTRUCT {
 WHERE {
 VALUES ?s
 {obo:PATO_0000383 #female
-obo:PATO_000384 #male
+obo:PATO_0000384 #male
   }
 }

@@ -6,13 +6,18 @@
 # Re-indexing is also takes place in order to generate newly added fields in the
 # solr collection
 
+while getopts h:p:c: flag
+do
+    case "${flag}" in
+        h) host=${OPTARG};;
+        p) port=${OPTARG};;
+        c) collection=${OPTARG};;
+        *) echo "!!! Invalid flag. Only -h and -p flags are supported."
+    esac
+done
 
+bash ./solr_index.sh -h $host -p $port -c $collection
 
-echo "Indexing ontology collection in server localhost:8993"
-bash solr_index.sh
+bash ./solr_config.sh -h $host -p $port -c $collection
 
-echo "Configuring ontology schema in server localhost:8993"
-bash solr_config.sh -h localhost -p 8993
-
-echo "Re-indexing ontology collection in server localhost:8993"
-bash solr_index.sh
+bash ./solr_index.sh -h $host -p $port -c $collection

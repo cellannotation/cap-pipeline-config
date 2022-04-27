@@ -12,22 +12,22 @@
 
 set -e
 
-core_name=ontology
 autocomplete_single_val_fields=(label)
 autocomplete_multi_val_fields=(synonym facets_annotation)
 
 autocomplete_fields=("${autocomplete_single_val_fields[@]}" "${autocomplete_multi_val_fields[@]}")
 
-while getopts h:p: flag
+while getopts h:p:c: flag
 do
     case "${flag}" in
         h) host=${OPTARG};;
         p) port=${OPTARG};;
+        c) collection=${OPTARG};;
         *) echo "!!! Invalid flag. Only -h and -p flags are supported."
     esac
 done
 
-echo "Updating $core_name in server $host:$port"
+echo "Updating $collection in server $host:$port"
 
 echo "Adding textEdge field type"
 curl -X POST -H 'Content-type:application/json' --data-binary "{
@@ -52,7 +52,7 @@ curl -X POST -H 'Content-type:application/json' --data-binary "{
                    {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\" }]
     }
   }
-}" http://$host:$port/solr/$core_name/schema --show-error --fail
+}" http://$host:$port/solr/$collection/schema --show-error --fail
 
 echo "Adding textWhitespaceEdge field type"
 curl -X POST -H 'Content-type:application/json' --data-binary "{
@@ -75,7 +75,7 @@ curl -X POST -H 'Content-type:application/json' --data-binary "{
                    {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\" }]
     }
   }
-}" http://$host:$port/solr/$core_name/schema --show-error --fail
+}" http://$host:$port/solr/$collection/schema --show-error --fail
 
 echo "Adding textCustomEdge field type"
 curl -X POST -H 'Content-type:application/json' --data-binary "{
@@ -102,7 +102,7 @@ curl -X POST -H 'Content-type:application/json' --data-binary "{
                    {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\" }]
     }
   }
-}" http://$host:$port/solr/$core_name/schema --show-error --fail
+}" http://$host:$port/solr/$collection/schema --show-error --fail
 
 echo "Adding auto complete single value fields: ${autocomplete_single_val_fields[*]}"
 for field in "${autocomplete_single_val_fields[@]}"; do
@@ -116,7 +116,7 @@ for field in "${autocomplete_single_val_fields[@]}"; do
        \"stored\":true,
        \"multiValued\":false
      }
-  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
 
   echo "Adding auto complete field wse: ${field}"
   curl -X POST -H 'Content-type:application/json' --data-binary "{
@@ -127,7 +127,7 @@ for field in "${autocomplete_single_val_fields[@]}"; do
        \"stored\":true,
        \"multiValued\":false
      }
-  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
 
   echo "Adding auto complete field ce: ${field}"
   curl -X POST -H 'Content-type:application/json' --data-binary "{
@@ -138,7 +138,7 @@ for field in "${autocomplete_single_val_fields[@]}"; do
        \"stored\":true,
        \"multiValued\":false
      }
-  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
 
 # end for
 done
@@ -155,7 +155,7 @@ for field in "${autocomplete_multi_val_fields[@]}"; do
        \"stored\":true,
        \"multiValued\":true
      }
-  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
 
 
   echo "Adding auto complete field wse: ${field}"
@@ -167,7 +167,7 @@ for field in "${autocomplete_multi_val_fields[@]}"; do
        \"stored\":true,
        \"multiValued\":true
      }
-  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
 
   echo "Adding auto complete field ce: ${field}"
   curl -X POST -H 'Content-type:application/json' --data-binary "{
@@ -178,7 +178,7 @@ for field in "${autocomplete_multi_val_fields[@]}"; do
        \"stored\":true,
        \"multiValued\":true
      }
-  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
 
 # end for
 done
@@ -193,7 +193,7 @@ for field in "${autocomplete_fields[@]}"; do
     \"add-copy-field\":{
     \"source\":\"${field}\",
     \"dest\":\"${field}_autosuggest_e\"}
-  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
 
   echo "Copying auto complete field wse: ${field}"
   # Now configure with the Schema API
@@ -202,7 +202,7 @@ for field in "${autocomplete_fields[@]}"; do
     \"add-copy-field\":{
     \"source\":\"${field}\",
     \"dest\":\"${field}_autosuggest_wse\"}
-  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
 
   echo "Copying auto complete field ce: ${field}"
   # Now configure with the Schema API
@@ -211,7 +211,7 @@ for field in "${autocomplete_fields[@]}"; do
     \"add-copy-field\":{
     \"source\":\"${field}\",
     \"dest\":\"${field}_autosuggest_ce\"}
-  }" http://$host:$port/solr/$core_name/schema --show-error --fail
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
 
 # end for
 done

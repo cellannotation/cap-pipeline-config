@@ -27,7 +27,7 @@ neo_node_labelling:
       - UBERON:0000105
     label: Developmental_stage
   - classes:
-      - HANCESTRO:0004 
+      - HANCESTRO:0004
     label: Race
   - classes:
       - MONDO:0000001
