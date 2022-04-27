@@ -32,9 +32,6 @@ neo_node_labelling:
   - classes:
       - MONDO:0000001
     label: Disease
-  - classes:
-      - MONDO:0020683
-    label: Acute_disease
 
 curie_map:
   GITHUB: https://github.com/
