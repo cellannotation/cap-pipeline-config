@@ -60,6 +60,8 @@ curie_map:
   PCL: http://purl.obolibrary.org/obo/PCL_
   HANCESTRO: http://purl.obolibrary.org/obo/HANCESTRO_
   MONDO: http://purl.obolibrary.org/obo/MONDO_
+  EFO: http://www.ebi.ac.uk/efo/EFO_
+  PATO: http://purl.obolibrary.org/obo/PATO_
 
 filters:
   solr:
