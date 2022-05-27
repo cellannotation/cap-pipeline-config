@@ -104,6 +104,26 @@ curl -X POST -H 'Content-type:application/json' --data-binary "{
   }
 }" http://$host:$port/solr/$collection/schema --show-error --fail
 
+echo "Adding nameExact field type"
+curl -X POST -H 'Content-type:application/json' --data-binary "{
+  \"add-field-type\":{
+    \"name\":\"nameExact\",
+    \"class\":\"solr.TextField\",
+    \"indexAnalyzer\":{
+      \"tokenizer\":{
+         \"class\":\"solr.KeywordTokenizerFactory\"},
+       \"filters\":[{\"class\":\"solr.LowerCaseFilterFactory\" },
+                   {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\"}]
+    },
+    \"queryAnalyzer\":{
+      \"tokenizer\":{
+         \"class\":\"solr.WhitespaceTokenizerFactory\" },
+       \"filters\":[{\"class\":\"solr.LowerCaseFilterFactory\" },
+                   {\"class\":\"solr.RemoveDuplicatesTokenFilterFactory\" }]
+    }
+  }
+}" http://$host:$port/solr/$collection/schema --show-error --fail
+
 echo "Adding auto complete single value fields: ${autocomplete_single_val_fields[*]}"
 for field in "${autocomplete_single_val_fields[@]}"; do
 
@@ -140,7 +160,17 @@ for field in "${autocomplete_single_val_fields[@]}"; do
      }
   }" http://$host:$port/solr/$collection/schema --show-error --fail
 
-# end for
+  echo "Adding auto complete field ne: ${field}"
+  curl -X POST -H 'Content-type:application/json' --data-binary "{
+    \"add-field\":{
+       \"name\":\"${field}_autosuggest_ne\",
+       \"type\":\"nameExact\",
+       \"indexed\":true,
+       \"stored\":true,
+       \"multiValued\":false
+     }
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
+
 done
 
 echo "Adding auto complete multi value fields: ${autocomplete_multi_val_fields[*]}"
@@ -180,15 +210,23 @@ for field in "${autocomplete_multi_val_fields[@]}"; do
      }
   }" http://$host:$port/solr/$collection/schema --show-error --fail
 
-# end for
+  echo "Adding auto complete field ne: ${field}"
+  curl -X POST -H 'Content-type:application/json' --data-binary "{
+    \"add-field\":{
+       \"name\":\"${field}_autosuggest_ne\",
+       \"type\":\"nameExact\",
+       \"indexed\":true,
+       \"stored\":true,
+       \"multiValued\":true
+     }
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
+
 done
 
 echo "Copying auto complete fields: ${autocomplete_fields[*]}"
 for field in "${autocomplete_fields[@]}"; do
 
   echo "Copying auto complete field e: ${field}"
-  # Now configure with the Schema API
-  # Modify this with your desired schema configuration
   curl -X POST -H 'Content-type:application/json' --data-binary "{
     \"add-copy-field\":{
     \"source\":\"${field}\",
@@ -196,8 +234,6 @@ for field in "${autocomplete_fields[@]}"; do
   }" http://$host:$port/solr/$collection/schema --show-error --fail
 
   echo "Copying auto complete field wse: ${field}"
-  # Now configure with the Schema API
-  # Modify this with your desired schema configuration
   curl -X POST -H 'Content-type:application/json' --data-binary "{
     \"add-copy-field\":{
     \"source\":\"${field}\",
@@ -205,15 +241,19 @@ for field in "${autocomplete_fields[@]}"; do
   }" http://$host:$port/solr/$collection/schema --show-error --fail
 
   echo "Copying auto complete field ce: ${field}"
-  # Now configure with the Schema API
-  # Modify this with your desired schema configuration
   curl -X POST -H 'Content-type:application/json' --data-binary "{
     \"add-copy-field\":{
     \"source\":\"${field}\",
     \"dest\":\"${field}_autosuggest_ce\"}
   }" http://$host:$port/solr/$collection/schema --show-error --fail
 
-# end for
+  echo "Copying auto complete field ne: ${field}"
+  curl -X POST -H 'Content-type:application/json' --data-binary "{
+    \"add-copy-field\":{
+    \"source\":\"${field}\",
+    \"dest\":\"${field}_autosuggest_ne\"}
+  }" http://$host:$port/solr/$collection/schema --show-error --fail
+
 done
 
 echo "successfully finished configuring solr schema with the Schema API."
