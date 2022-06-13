@@ -15,635 +15,260 @@ represent_values_and_annotations_as_json:
 
 neo_node_labelling:
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003295
-    label: pharyngeal_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004721
-    label: crista_ampullaris
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002451
-    label: endometrial_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002411
-    label: clitoris
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005057
-    label: immune_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009717
-    label: coronal_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005179
-    label: pelvic_region_element
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003484
-    label: eye_sebaceous_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001853
-    label: utricle_of_membranous_labyrinth
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008918
-    label: ampulla_of_Lorenzini
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001043
-    label: esophagus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002360
-    label: meninx
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002240
-    label: spinal_cord
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007132
-    label: head_kidney
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007801
-    label: pygostyle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000423
-    label: eccrine_sweat_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004054
-    label: internal_male_genitalia
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000080
-    label: mesonephros
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004177
-    label: hemopoietic_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001822
-    label: orbital_septum
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005204
-    label: larynx_submucosa_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001911
-    label: mammary_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002364
-    label: tympanic_membrane
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002370
-    label: thymus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000982
-    label: skeletal_joint
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002108
-    label: small_intestine
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003668
-    label: synovial_bursa
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001854
-    label: saccule_of_membranous_labyrinth
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008855
-    label: placenta_metrial_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009102
-    label: supraneural_body
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000171
-    label: respiration_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001339
-    label: ischiocavernosus_muscle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001723
-    label: tongue
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000948
-    label: heart
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003103
-    label: compound_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008859
-    label: cardiac_gastric_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001964
-    label: least_splanchnic_nerve
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005058
-    label: hemolymphoid_system_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003410
-    label: oropharyngeal_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003605
-    label: eye_skin_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002073
-    label: hair_follicle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001044
-    label: saliva-secreting_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001630
-    label: muscle_organ
-  - classes:
-      - UBERON:0010000
-    label: Multicellular_anatomical_structure
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001100
-    label: pectoralis_minor
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008310
-    label: nasopharyngeal_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000970
-    label: eye
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009072
-    label: ventrobronchus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007802
-    label: uropygial_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009115
-    label: thoracic_thymus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001829
-    label: major_salivary_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001484
-    label: articular_capsule
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004772
-    label: eyelid_tarsus
-  - classes:
-      - CL:0000548
-    label: Animal_cell
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001132
-    label: parathyroid_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002106
-    label: spleen
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006583
-    label: statocyst
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005250
-    label: stomatodeum_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004790
-    label: skin_mucous_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003547
-    label: brain_meninx
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002041
-    label: terminal_bronchus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003133
-    label: reproductive_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004053
-    label: external_male_genitalia
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001983
-    label: crypt_of_Lieberkuhn
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001830
-    label: minor_salivary_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005177
-    label: trunk_region_element
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001103
-    label: diaphragm
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000461
-    label: minor_vestibular_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007357
-    label: proventriculus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001327
-    label: coccygeus_muscle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002110
-    label: gall_bladder
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004176
-    label: external_genitalia
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003250
-    label: rectus_capitis_lateralis_muscle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001905
-    label: pineal_body
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000491
-    label: solid_compound_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001338
-    label: urethral_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009756
-    label: spermaceti_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000489
-    label: cavitated_compound_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002185
-    label: bronchus
-  - classes:
-      - MONDO:0000001
-    label: Disease
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002048
-    label: lung
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005052
-    label: gizzard
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002365
-    label: exocrine_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009709
-    label: ventral_pancreas
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000018
-    label: compound_eye
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000391
-    label: leptomeninx
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001820
-    label: sweat_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001237
-    label: paraaortic_body
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003903
-    label: bursa_of_Fabricius
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004759
-    label: cranial_salt_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009116
-    label: thymoid
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009117
-    label: indifferent_gonad
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002107
-    label: liver
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000016
-    label: endocrine_pancreas
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004760
-    label: gland_of_anal_canal
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005399
-    label: male_reproductive_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000333
-    label: intestinal_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008812
-    label: hemipenis
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009114
-    label: cervical_thymus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005442
-    label: abdominal_external_oblique_muscle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002363
-    label: dura_mater
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002232
-    label: olfactory_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002366
-    label: bulbo-urethral_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002359
-    label: fibrous_pericardium
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002046
-    label: thyroid_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002255
-    label: vomeronasal_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008250
-    label: cardiac_stomach
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001154
-    label: vermiform_appendix
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008815
-    label: pharyngeal_slit
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001053
-    label: arthropod_neurohemal_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000056
-    label: ureter
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003485
-    label: vagina_sebaceous_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005454
-    label: abdominal_internal_oblique_muscle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000989
-    label: penis
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003975
-    label: internal_female_genitalia
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001849
-    label: membranous_labyrinth
-  - classes:
-      - HANCESTRO:0004
-    label: Race
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001690
-    label: ear
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001818
-    label: tarsal_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005175
-    label: chest_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005067
-    label: amphid_sensory_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006858
-    label: adrenal/interrenal_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001821
-    label: sebaceous_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002113
-    label: kidney
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007773
-    label: scrotal_sweat_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006925
-    label: digestive_system_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002381
-    label: pectoralis_major
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006723
-    label: cochlear_modiolus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000017
-    label: exocrine_pancreas
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001220
-    label: quadratus_lumborum
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000992
-    label: ovary
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005398
-    label: female_reproductive_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002419
-    label: skin_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000409
-    label: serous_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001121
-    label: longus_colli_muscle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003555
-    label: spinal_cord_pia_mater
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004859
-    label: eye_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007844
-    label: cartilage_element
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008917
-    label: ampullary_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002183
-    label: lobar_bronchus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001474
-    label: bone_element
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006976
-    label: peptonephridium
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002184
-    label: segmental_bronchus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000059
-    label: large_intestine
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001264
-    label: pancreas
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001038
-    label: chordotonal_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002369
-    label: adrenal_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002393
-    label: pharyngotympanic_tube
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007359
-    label: ruminant_forestomach
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009071
-    label: mesobronchus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004187
-    label: Harderian_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001987
-    label: placenta
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007358
-    label: abomasum
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000007
-    label: pituitary_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001221
-    label: transversus_abdominis_muscle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002404
-    label: transversus_thoracis
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005203
-    label: trachea_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0005056
-    label: external_female_genitalia
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004757
-    label: rectal_salt_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001629
-    label: carotid_body
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007770
-    label: osphradium
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008974
-    label: apocrine_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0007196
-    label: tracheobronchial_tree
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002367
-    label: prostate_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003134
-    label: female_reproductive_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002093
-    label: spinal_dura_mater
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001212
-    label: duodenal_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003560
-    label: spinal_cord_arachnoid_mater
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002518
-    label: otolith_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008811
-    label: intromittent_organ
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002075
-    label: viscus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006749
-    label: superior_parathyroid_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000057
-    label: urethra
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000359
-    label: preputial_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001255
-    label: urinary_bladder
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002382
-    label: rectus_abdominis_muscle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000473
-    label: testis
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000998
-    label: seminal_vesicle
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006868
-    label: seminal_fluid_secreting_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003699
-    label: pubic_symphysis
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003937
-    label: reproductive_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002368
-    label: endocrine_gland
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001173
-    label: biliary_tree
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004765
-    label: skeletal_element
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004175
-    label: internal_genitalia
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002182
-    label: main_bronchus
-  - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009708
-    label: dorsal_pancreas
+      - CL:0000000 and BFO:0000050 some UBERON:0000996
+    label: vagina
   - classes:
       - NCBITaxon:33208
     label: Metazoan
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000995
-    label: uterus
+      - CL:0000000 and BFO:0000050 some UBERON:0001690
+    label: ear
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006856
-    label: interrenal_gland
+      - CL:0000000 and BFO:0000050 some UBERON:0005160
+    label: vestigial_structure
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0002120
-    label: pronephros
+      - CL:0000000 and BFO:0000050 some UBERON:0000160
+    label: intestine
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0004758
-    label: salt_gland
+      - CL:0000000 and BFO:0000050 some UBERON:0000970
+    label: eye
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001817
-    label: lacrimal_gland
+      - CL:0000000 and BFO:0000050 some UBERON:0001705
+    label: nail
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000081
-    label: metanephros
+      - CL:0000000 and BFO:0000050 some UBERON:0001021
+    label: nerve
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006755
-    label: inferior_parathyroid_gland
+      - CL:0000000 and BFO:0000050 some UBERON:0000992
+    label: ovary
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009014
-    label: lower_back_skin
+      - CL:0000000 and BFO:0000050 some UBERON:0003126
+    label: trachea
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000945
-    label: stomach
+      - CL:0000000 and BFO:0000050 some UBERON:0001052
+    label: rectum
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000991
-    label: gonad
+      - CL:0000000 and BFO:0000050 some UBERON:0001132
+    label: parathyroid_gland
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0003135
-    label: male_reproductive_organ
+      - CL:0000000 and BFO:0000050 some UBERON:0002046
+    label: thyroid_gland
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009866
-    label: Hatschek's_nephridium
+      - CL:0000000 and BFO:0000050 some UBERON:0000007
+    label: pituitary_gland
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001043
+    label: esophagus
+  - classes:
+      - CL:0000548
+    label: Animal_cell
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001300
+    label: scrotum
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000056
+    label: ureter
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:3011048
+    label: genital_system
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001638
+    label: vein
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0003889
+    label: fallopian_tube
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001134
+    label: skeletal_muscle_tissue
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000989
+    label: penis
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002369
+    label: adrenal_gland
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001981
+    label: blood_vessel
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002073
+    label: hair_follicle
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001245
+    label: anus
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002366
+    label: bulbo-urethral_gland
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000955
+    label: brain
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001905
+    label: pineal_body
+  - classes:
+      - CL:0000000 and BFO:0000050 some CL:0000010
+    label: cultured_cell
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002106
+    label: spleen
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000310
+    label: breast
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001264
+    label: pancreas
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002095
+    label: mesentery
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001154
+    label: vermiform_appendix
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0006562
+    label: pharynx
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0012168
+    label: umbilical_cord_blood
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001898
+    label: hypothalamus
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002048
+    label: lung
+  - classes:
+      - HANCESTRO:0004
+    label: Race
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001723
+    label: tongue
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001982
+    label: capillary
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002110
+    label: gall_bladder
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000004
+    label: nose
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002372
+    label: tonsil
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0003672
+    label: dentition
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002465
+    label: lymphoid_system
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001987
+    label: placenta
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0018707
+    label: bladder_organ
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002097
+    label: skin_of_body
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002113
+    label: kidney
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002411
+    label: clitoris
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000002
+    label: uterine_cervix
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001474
+    label: bone_element
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000178
+    label: blood
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001044
+    label: saliva-secreting_gland
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000948
+    label: heart
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0015143
+    label: mesenteric_fat_pad
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000165
+    label: mouth
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001637
+    label: artery
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000473
+    label: testis
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0005169
+    label: interstitial_tissue
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001013
+    label: adipose_tissue
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001103
+    label: diaphragm
+  - classes:
+      - UBERON:0010000
+    label: Multicellular_anatomical_structure
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000982
+    label: skeletal_joint
+  - classes:
+      - MONDO:0000001
+    label: Disease
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000043
+    label: tendon
   - classes:
       - UBERON:0000105
     label: Developmental_stage
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0001350
-    label: coccyx
+      - CL:0000000 and BFO:0000050 some UBERON:0001737
+    label: larynx
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0006860
-    label: swim_bladder
+      - CL:0000000 and BFO:0000050 some UBERON:0000995
+    label: uterus
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000382
-    label: apocrine_sweat_gland
+      - CL:0000000 and BFO:0000050 some UBERON:0008846
+    label: skeletal_ligament
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009196
-    label: indifferent_external_genitalia
+      - CL:0000000 and BFO:0000050 some UBERON:0002240
+    label: spinal_cord
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000414
-    label: mucous_gland
+      - CL:0000000 and BFO:0000050 some UBERON:0001000
+    label: vas_deferens
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000325
-    label: gastric_gland
+      - CL:0000000 and BFO:0000050 some UBERON:0002108
+    label: small_intestine
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0000460
-    label: major_vestibular_gland
+      - CL:0000000 and BFO:0000050 some UBERON:0002370
+    label: thymus
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0009074
-    label: syrinx_organ
+      - CL:0000000 and BFO:0000050 some UBERON:0002367
+    label: prostate_gland
   - classes:
-      - CL:0000000 and BFO:0000050 some UBERON:0008246
-    label: pyloric_stomach
+      - CL:0000000 and BFO:0000050 some UBERON:0000997
+    label: mammalian_vulva
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0001911
+    label: mammary_gland
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000945
+    label: stomach
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000059
+    label: large_intestine
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0002107
+    label: liver
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000998
+    label: seminal_vesicle
+  - classes:
+      - CL:0000000 and BFO:0000050 some UBERON:0000057
+    label: urethra
 curie_map:
   GITHUB: https://github.com/
   GITHUBH: http://github.com/
