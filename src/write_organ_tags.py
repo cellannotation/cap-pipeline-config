@@ -49,11 +49,12 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT  ?x ?xLabel
 WHERE 
 {
-      ?x inSubset: <http://purl.obolibrary.org/obo/uberon/core#organ_slim> .
+      ?x inSubset: 	<http://purl.obolibrary.org/obo/uberon#cap_organ_slim> .
       ?x rdfs:label ?xLabel 
 }
     """
 
+# <http://purl.obolibrary.org/obo/uberon/core#organ_slim>
 query_output = utils.run_query(organ_query)
 
 # generate list of organ cell DL queries and semantic labels

@@ -11,8 +11,9 @@ def run_query(query):
     Returns:
     output (list): Query output
     """
+    # "https://ubergraph.apps.renci.org/sparql"
     sparql = SPARQLWrapper(
-        "https://ubergraph.apps.renci.org/sparql"
+        "http://localhost:8080/rdf4j-server/repositories/cap"
     )
     sparql.setReturnFormat(JSON)
     sparql.setQuery(query)
