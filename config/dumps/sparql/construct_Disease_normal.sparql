@@ -1,0 +1,10 @@
+PREFIX PATO: <http://purl.obolibrary.org/obo/>
+
+CONSTRUCT {
+	?s <http://n2o.neo/property/nodeLabel> "Disease" .
+}
+WHERE {
+VALUES ?s
+{PATO:0000461 #normal
+  }
+}
