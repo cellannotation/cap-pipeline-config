@@ -211,6 +211,7 @@ neo_node_labelling:
     label: diaphragm
   - classes:
       - UBERON:0010000
+      - UBERON:0000178
     label: Multicellular_anatomical_structure
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000982
