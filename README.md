@@ -17,7 +17,7 @@ To deploy fresh version of index run the following command:
 
 e.g.
 
-    ./solr_index.sh -h localhost -p 8984 -c ontology
+    ./solr_index.sh -h localhost -p 8983 -c ontology
 
 
 ### CAP PRoject Environment
