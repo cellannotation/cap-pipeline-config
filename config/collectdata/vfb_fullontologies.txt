@@ -4,5 +4,5 @@ http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
 http://purl.obolibrary.org/obo/hancestro/hancestro.owl
 https://www.ebi.ac.uk/efo/efo-base.owl
 http://purl.obolibrary.org/obo/mondo/mondo-base.owl
-https://github.com/pato-ontology/pato/blob/master/pato-base.owl
+http://purl.obolibrary.org/obo/pato.owl
 https://raw.githubusercontent.com/kharchenkolab/cap_organ_slim/main/src/results/cap_organ_slim.owl
