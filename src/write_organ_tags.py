@@ -24,8 +24,8 @@ def generate_organ_cells(output):
     for n in output:
         curie = n['x']['value'].replace("_", ":")
         curie = curie.partition('http://purl.obolibrary.org/obo/')[-1]
-        # CL:0000000 -> 'cell'; BFO:0000050 -> 'part of'
-        dl_query = "CL:0000000 and BFO:0000050 some " + curie
+        # RO:0002131 -> 'overlaps'
+        dl_query = "RO:0002131 some " + curie
         label = n['xLabel']['value'].replace(" ", "_")
         organs.append((dl_query, label))
     return organs
