@@ -13,6 +13,8 @@ efo:EFO_0008992 #MERFISH
 efo:EFO_0008853 #Patch-seq
 efo:EFO_0030059 #10x multiome
 efo:EFO_0030060 #mCT-seq
+efo:EFO_0008919 #Seq-Well
+efo:EFO_0030019 #Seq-Well S3
 efo:EFO_0008930 #Smart-seq
 efo:EFO:0008931 #Smart-seq2
 efo:EFO_0010961 #Visium Spatial Gene Expression
