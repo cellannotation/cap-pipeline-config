@@ -3,6 +3,26 @@ Building ontology pipeline configurations for Cell Annotation Platform
 
 ## Deployment
 
+### Auto-deployment
+
+To auto-deploy solr.json index please keep `gs://cap-rc1-ols/solr/indexes/solr.json` up to date.
+
+To upload local `solr.json` use the following commands:
+
+    export ENV=[sandbox_env_here]
+
+    export PROJECT_ID=[put_you_project_id_here]
+
+    gcloud auth login
+
+    gcloud config set project $PROJECT_ID
+
+    gsutil cp solr.json gs://cap-${ENV}-ols/solr/indexes/solr.json
+
+`sandbox_env_here` can be either one of `prod`, `rc1`, `clean`
+
+### Manual deployment
+
 To deploy initial version of index run the following command:
 
     ./solr_init.sh -h [HOSTNAME] -p [PORT] -c [COLLECTION]
@@ -20,7 +40,7 @@ e.g.
     ./solr_index.sh -h localhost -p 8983 -c ontology
 
 
-### CAP PRoject Environment
+#### CAP Project Environment
 
 Auth into GCP:
 
