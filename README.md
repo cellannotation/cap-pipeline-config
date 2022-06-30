@@ -5,7 +5,7 @@ Building ontology pipeline configurations for Cell Annotation Platform
 
 ### Auto-deployment
 
-Ask admin to grant you with `Storage Object Creator` role.
+Ask admin to grant you with `Storage Object Admin` role.
 
 To auto-deploy solr.json index please keep `gs://cap-rc1-ols/solr/indexes/solr.json` up to date. Every time CAP is deployed
 CI/CD pipeline is uses `gs://cap-rc1-ols/solr/indexes/solr.json` to migrate indexes for OLS.
