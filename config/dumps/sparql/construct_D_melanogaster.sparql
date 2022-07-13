@@ -1,0 +1,12 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+	?s <http://n2o.neo/property/nodeLabel> "Drosophila_melanogaster" .
+}
+WHERE {
+  { ?s rdfs:subClassOf* obo:FBdv_00000000  } 
+  UNION { ?s rdfs:subClassOf* obo:FBdv_00007013 }
+  UNION { ?s rdfs:subClassOf* obo:FBdv_00007024 }
+  UNION { ?s rdfs:subClassOf* obo:FBdv_00005259 } 
+  }

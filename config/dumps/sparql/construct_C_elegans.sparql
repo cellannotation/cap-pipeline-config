@@ -1,0 +1,9 @@
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+  ?s <http://n2o.neo/property/nodeLabel> "Caenorhabditis_elegans" .
+}
+WHERE {
+  ?s rdfs:subClassOf* obo:WBls_0000075 
+}
