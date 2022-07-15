@@ -1,3 +1,5 @@
+# Add species semantic tags species to assist with contextual filtering for developmental stage terms
+
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 CONSTRUCT {
@@ -5,5 +7,5 @@ CONSTRUCT {
  }
 WHERE {
   ?s rdfs:label ?o
-  FILTER(isIRI(?s) && (STRSTARTS(str(?s), "http://purl.obolibrary.org/obo/HsapDv_")))
+  FILTER(STRSTARTS(str(?s), "http://purl.obolibrary.org/obo/HsapDv_"))
 }
