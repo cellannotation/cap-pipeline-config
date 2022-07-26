@@ -1,4 +1,4 @@
-PREFIX PATO: <http://purl.obolibrary.org/obo/>
+PREFIX PATO: <http://purl.obolibrary.org/obo/PATO_>
 
 CONSTRUCT {
 	?s <http://n2o.neo/property/nodeLabel> "Disease" .
