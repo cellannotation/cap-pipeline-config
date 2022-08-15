@@ -16,212 +16,281 @@ represent_values_and_annotations_as_json:
 neo_node_labelling:
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000996
-    label: vagina  # a cell type that is associated with a vagina
+    label: vagina
+    description: a cell type that is associated with a vagina
   - classes:
       - NCBITaxon:33208
-    label: Metazoan  # an organism that belongs to the division Metazoa
+    label: Metazoan  
+    description: an organism that belongs to the division Metazoa
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001690
-    label: ear  # a cell type that is associated with a ear
+    label: ear
+    description: a cell type that is associated with an ear
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0005160
-    label: vestigial_structure  # a cell type that is associated with a vestigial structure
+    label: vestigial_structure
+    description: a cell type that is associated with a vestigial structure
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000160
-    label: intestine  # a cell type that is associated with an intestine
+    label: intestine
+    description: a cell type that is associated with an intestine
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000970
-    label: eye  # a cell type that is associated with an eye
+    label: eye
+    description: a cell type that is associated with an eye
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001705
-    label: nail  # a cell type that is associated with a nail
+    label: nail
+    description: a cell type that is associated with a nail
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001021
-    label: nerve  # a cell type that is associated with a nerve
+    label: nerve
+    description: a cell type that is associated with a nerve
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000992
-    label: ovary  # a cell type that is associated with an ovary
+    label: ovary
+    description: a cell type that is associated with an ovary
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0003126
-    label: trachea  # a cell type that is associated with a trachea
+    label: trachea
+    description: a cell type that is associated with a trachea
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001052
-    label: rectum  # a cell type that is associated with a rectum
+    label: rectum
+    description: a cell type that is associated with a rectum
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001132
-    label: parathyroid_gland  # a cell type that is associated with a parathyroid gland
+    label: parathyroid_gland
+    description: a cell type that is associated with a parathyroid gland
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002046
-    label: thyroid_gland  # a cell type that is associated with a thyroid 
+    label: thyroid_gland
+    description: a cell type that is associated with a thyroid 
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000007
-    label: pituitary_gland  # a cell type that is associated with a pituitary gland
+    label: pituitary_gland
+    description: a cell type that is associated with a pituitary gland
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001043
-    label: esophagus  # a cell type that is associated with an oesophagus
+    label: esophagus
+    description: a cell type that is associated with an oesophagus
   - classes:
       - CL:0000548
-    label: Animal_cell  # a cell that was sampled from an animal
+    label: Animal_cell
+    description: a cell that was sampled from an animal
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001300
-    label: scrotum  # a cell type that is associated with a scrotum
+    label: scrotum
+    description: a cell type that is associated with a scrotum
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000056
-    label: ureter  # a cell type that is associated with a ureter
+    label: ureter
+    description: a cell type that is associated with a ureter
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:3011048
-    label: genital_system  # a cell type that is associated with a genital system
+    label: genital_system
+    description: a cell type that is associated with a genital system
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001638
-    label: vein  # a cell type that is associated with a vein
+    label: vein
+    description: a cell type that is associated with a vein
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0003889
-    label: fallopian_tube  # a cell type that is associated with a fallopian tube
+    label: fallopian_tube
+    description: a cell type that is associated with a fallopian tube
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001134
-    label: skeletal_muscle_tissue  # a cell type that is associated with skeletal muscle tissue
+    label: skeletal_muscle_tissue
+    description: a cell type that is associated with skeletal muscle tissue
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000989
-    label: penis  # a cell type that is associated with a penis
+    label: penis
+    description: a cell type that is associated with a penis
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002369
-    label: adrenal_gland  # a cell type that is associated with an adrenal gland
+    label: adrenal_gland
+    description: a cell type that is associated with an adrenal gland
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001981
-    label: blood_vessel  # a cell type that is associated with a blood vessel
+    label: blood_vessel
+    description: a cell type that is associated with a blood vessel
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002073
-    label: hair_follicle  # a cell type that is associated with a hair follicle
+    label: hair_follicle
+    description: a cell type that is associated with a hair follicle
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001245
-    label: anus  # a cell type that is associated with an anus
+    label: anus
+    description: a cell type that is associated with an anus
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002366
-    label: bulbo-urethral_gland  # a cell type that is associated with a bulbourethral gland
+    label: bulbo-urethral_gland
+    description: a cell type that is associated with a bulbourethral gland
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000955
-    label: brain  # a cell type that is associated with a brain
+    label: brain
+    description: a cell type that is associated with a brain
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001905
-    label: pineal_body  # a cell type that is associated with a pineal body
+    label: pineal_body
+    description: a cell type that is associated with a pineal body
   - classes:
       - CL:0000000 and BFO:0000050 some CL:0000010
-    label: cultured_cell  # a cell type that is associated with a cultured cell
+    label: cultured_cell
+    description: a cell type that is associated with a cultured cell
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002106
-    label: spleen  # a cell type that is associated with a spleen
+    label: spleen
+    description: a cell type that is associated with a spleen
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000310
-    label: breast  # a cell type that is associated with a breast
+    label: breast
+    description: a cell type that is associated with a breast
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001264
-    label: pancreas  # a cell type that is associated with a pancreas
+    label: pancreas
+    description: a cell type that is associated with a pancreas
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002095
-    label: mesentery  # a cell type that is associated with a mesentary
+    label: mesentery
+    description: a cell type that is associated with a mesentary
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001154
-    label: vermiform_appendix  # a cell type that is associated with a vermiform appendix
+    label: vermiform_appendix
+    description: a cell type that is associated with a vermiform appendix
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0006562
-    label: pharynx  # a cell type that is associated with a pharynx
+    label: pharynx
+    description: a cell type that is associated with a pharynx
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0012168
-    label: umbilical_cord_blood  # a cell type that is associated with umbilical cord blood
+    label: umbilical_cord_blood
+    description: a cell type that is associated with umbilical cord blood
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001898
-    label: hypothalamus  # a cell type that is associated with a hypothalamus
+    label: hypothalamus
+    description: a cell type that is associated with a hypothalamus
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002048
-    label: lung  # a cell type that is associated with a lung
+    label: lung
+    description: a cell type that is associated with a lung
   - classes:
       - HANCESTRO:0004
-    label: Race  # a term that refers to the ancestry of a Homo sapien
+    label: Race
+    description: a term that refers to the ancestry of a Homo sapien
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001723
-    label: tongue  # a cell type that is associated with a tongue
+    label: tongue
+    description: a cell type that is associated with a tongue
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001982
-    label: capillary  # a cell type that is associated with a capillary
+    label: capillary
+    description: a cell type that is associated with a capillary
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002110
-    label: gall_bladder  # a cell type that is associated with a gallbladder
+    label: gall_bladder
+    description: a cell type that is associated with a gallbladder
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000004
-    label: nose  # a cell type that is associated with a nose
+    label: nose
+    description: a cell type that is associated with a nose
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002372
-    label: tonsil  # a cell type that is associated with a tonsil
+    label: tonsil
+    description: a cell type that is associated with a tonsil
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0003672
-    label: dentition  # a cell type that is associated with dentition
+    label: dentition
+    description: a cell type that is associated with dentition
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002465
-    label: lymphoid_system  # a cell type that is associated with a lymphoid system
+    label: lymphoid_system
+    description: a cell type that is associated with a lymphoid system
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001987
-    label: placenta  # a cell type that is associated with a placenta
+    label: placenta
+    description: a cell type that is associated with a placenta
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0018707
-    label: bladder_organ  # a cell type that is associated with a bladder
+    label: bladder_organ
+    description: a cell type that is associated with a bladder
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002097
-    label: skin_of_body  # a cell type that is associated with the dermis or epidermis
+    label: skin_of_body
+    description: a cell type that is associated with the dermis or epidermis
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002113
-    label: kidney  # a cell type that is associated with a kidney
+    label: kidney
+    description: a cell type that is associated with a kidney
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002411
-    label: clitoris  # a cell type that is associated with a clitoris
+    label: clitoris
+    description: a cell type that is associated with a clitoris
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000002
-    label: uterine_cervix  # a cell type that is associated with a uterine cervix
+    label: uterine_cervix
+    description: a cell type that is associated with a uterine cervix
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001474
-    label: bone_element  # a cell type that is associated with a bone
+    label: bone_element
+    description: a cell type that is associated with a bone
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000178
-    label: blood  # a cell type that is associated with blood
+    label: blood
+    description: a cell type that is associated with blood
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001044
-    label: saliva-secreting_gland  # a cell type that is associated with a saliva-secreting gland
+    label: saliva-secreting_gland
+    description: a cell type that is associated with a saliva-secreting gland
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000948
-    label: heart  # a cell type that is associated with a heart
+    label: heart
+    description: a cell type that is associated with a heart
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0015143
-    label: mesenteric_fat_pad  # a cell type that is associated with a mesenteric fat pad
+    label: mesenteric_fat_pad
+    description: a cell type that is associated with a mesenteric fat pad
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000165
-    label: mouth  # a cell type that is associated with an oral cavity
+    label: mouth
+    description: a cell type that is associated with an oral cavity
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001637
-    label: artery  # a cell type that is associated with an artery
+    label: artery
+    description: a cell type that is associated with an artery
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000473
-    label: testis  # a cell type that is associated with a testis
+    label: testis
+    description: a cell type that is associated with a testis
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0005169
-    label: interstitial_tissue  # a cell type that is associated with interstitial tissue
+    label: interstitial_tissue
+    description: a cell type that is associated with interstitial tissue
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001013
-    label: adipose_tissue  # a cell type that is associated with adipose tissue
+    label: adipose_tissue
+    description: a cell type that is associated with adipose tissue
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001103
-    label: diaphragm  # a cell type that is associated with a diaphragm
+    label: diaphragm
+    description: a cell type that is associated with a diaphragm
   - classes:
       - UBERON:0010000
       - UBERON:0000178
-    label: Multicellular_anatomical_structure  # an anatomical structure that has more than one cell as a part, including blood 
+    label: Multicellular_anatomical_structure
+    description: an anatomical structure that has more than one cell as a part, including blood 
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000982
-    label: skeletal_joint  # a cell type that is associated with a skeletal joint
+    label: skeletal_joint
+    description: a cell type that is associated with a skeletal joint
   - classes:
       - MONDO:0000001
-    label: Disease  # a disease or disorder, plus 'normal'
+    label: Disease
+    description: a disease or disorder, plus 'normal' (latter pulled from SPARQL query)
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000043
-    label: tendon  # a cell type that is associated with a tendon
+    label: tendon
+    description: a cell type that is associated with a tendon
   - classes:
       - UBERON:0000105
       - FBdv:00007012
@@ -230,52 +299,68 @@ neo_node_labelling:
       - MmusDv:0000000
       - HsapDv:0000000
       - XAO:1000000
-    label: Developmental_stage  # a term that refers to a life cycle stage
+    label: Developmental_stage
+    description: a term that refers to a life cycle stage
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001737
-    label: larynx  # a cell type that is associated with a larynx
+    label: laryn
+    description: a cell type that is associated with a larynx
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000995
-    label: uterus  # a cell type that is associated with a uterus
+    label: uteru
+    description: a cell type that is associated with a uterus
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0008846
-    label: skeletal_ligament  # a cell type that is associated with a skeletal ligament
+    label: skeletal_ligamen
+    description: a cell type that is associated with a skeletal ligament
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002240
-    label: spinal_cord  # a cell type that is associated with a spinal cord
+    label: spinal_cor
+    description: a cell type that is associated with a spinal cord
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001000
-    label: vas_deferens  # a cell type that is associated with a vas deferens
+    label: vas_deferens
+    description: a cell type that is associated with a vas deferens
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002108
-    label: small_intestine  # a cell type that is associated with a small intestine
+    label: small_intestin
+    description: a cell type that is associated with a small intestine
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002370
-    label: thymus   # a cell type that is associated with a thymus
+    label: thymus
+    description: a cell type that is associated with a thymus
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002367
-    label: prostate_gland  # a cell type that is associated with a thymus
+    label: prostate_glan
+    description: a cell type that is associated with a thymus
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000997
-    label: mammalian_vulva  # a cell type that is associated with a vulva
+    label: mammalian_vulv
+    description: a cell type that is associated with a vulva
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001911
-    label: mammary_gland  # a cell type that is associated with a mammary gland
+    label: mammary_gland
+    description: a cell type that is associated with a mammary gland
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000945
-    label: stomach  # a cell type that is associated with a stomach
+    label: stomach
+    description: a cell type that is associated with a stomach
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000059
-    label: large_intestine  # a cell type that is associated with a large intestine
+    label: large_intestine
+    description: a cell type that is associated with a large intestine
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002107
-    label: liver  # a cell type that is associated with a liver
+    label: liver
+    description: a cell type that is associated with a liver
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000998
-    label: seminal_vesicle  # a cell type that is associated with a seminal vesicle
+    label: seminal_vesicle
+    description: a cell type that is associated with a seminal vesicle
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000057
-    label: urethra  # a cell type that is associated with a urethra
+    label: urethra
+    description: a cell type that is associated with a urethra
 curie_map:
   GITHUB: https://github.com/
   GITHUBH: http://github.com/
