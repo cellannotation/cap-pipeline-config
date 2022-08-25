@@ -303,19 +303,19 @@ neo_node_labelling:
     description: a term that refers to a life cycle stage
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001737
-    label: laryn
+    label: larynx
     description: a cell type that is associated with a larynx
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000995
-    label: uteru
+    label: uterus
     description: a cell type that is associated with a uterus
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0008846
-    label: skeletal_ligamen
+    label: skeletal_ligament
     description: a cell type that is associated with a skeletal ligament
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002240
-    label: spinal_cor
+    label: spinal_cord
     description: a cell type that is associated with a spinal cord
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001000
@@ -323,7 +323,7 @@ neo_node_labelling:
     description: a cell type that is associated with a vas deferens
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002108
-    label: small_intestin
+    label: small_intestine
     description: a cell type that is associated with a small intestine
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002370
@@ -331,11 +331,11 @@ neo_node_labelling:
     description: a cell type that is associated with a thymus
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0002367
-    label: prostate_glan
+    label: prostate_gland
     description: a cell type that is associated with a thymus
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000997
-    label: mammalian_vulv
+    label: mammalian_vulva
     description: a cell type that is associated with a vulva
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001911
