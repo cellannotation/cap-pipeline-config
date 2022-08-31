@@ -421,6 +421,7 @@ curie_map:
   EFO: http://www.ebi.ac.uk/efo/EFO_
   PATO: http://purl.obolibrary.org/obo/PATO_
   FBbt: http://purl.obolibrary.org/obo/FBbt_
+  FBdv: http://purl.obolibrary.org/obo/FBdv_
 
 filters:
   solr:
