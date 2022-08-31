@@ -15,13 +15,13 @@ represent_values_and_annotations_as_json:
 
 neo_node_labelling:
   - classes:
+      - CL:0000548
+    label: Animal_cell
+    description: a cell that was sampled from an animal
+  - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000996
     label: vagina
     description: a cell type that is associated with a vagina
-  - classes:
-      - NCBITaxon:33208
-    label: Metazoan  
-    description: an organism that belongs to the division Metazoa
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001690
     label: ear
@@ -74,10 +74,6 @@ neo_node_labelling:
       - CL:0000000 and BFO:0000050 some UBERON:0001043
     label: esophagus
     description: a cell type that is associated with an oesophagus
-  - classes:
-      - CL:0000548
-    label: Animal_cell
-    description: a cell that was sampled from an animal
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001300
     label: scrotum
@@ -175,10 +171,6 @@ neo_node_labelling:
     label: lung
     description: a cell type that is associated with a lung
   - classes:
-      - HANCESTRO:0004
-    label: Race
-    description: a term that refers to the ancestry of a Homo sapien
-  - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001723
     label: tongue
     description: a cell type that is associated with a tongue
@@ -275,32 +267,13 @@ neo_node_labelling:
     label: diaphragm
     description: a cell type that is associated with a diaphragm
   - classes:
-      - UBERON:0010000
-      - UBERON:0000178
-    label: Multicellular_anatomical_structure
-    description: an anatomical structure that has more than one cell as a part, including blood 
-  - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000982
     label: skeletal_joint
     description: a cell type that is associated with a skeletal joint
   - classes:
-      - MONDO:0000001
-    label: Disease
-    description: a disease or disorder, plus 'normal' (latter pulled from SPARQL query)
-  - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0000043
     label: tendon
     description: a cell type that is associated with a tendon
-  - classes:
-      - UBERON:0000105
-      - FBdv:00007012
-      - WBls:0000075
-      - ZFS:0100000
-      - MmusDv:0000000
-      - HsapDv:0000000
-      - XAO:1000000
-    label: Developmental_stage
-    description: a term that refers to a life cycle stage
   - classes:
       - CL:0000000 and BFO:0000050 some UBERON:0001737
     label: larynx
@@ -361,6 +334,62 @@ neo_node_labelling:
       - CL:0000000 and BFO:0000050 some UBERON:0000057
     label: urethra
     description: a cell type that is associated with a urethra
+  - classes:
+      - UBERON:0010000
+      - UBERON:0000178
+    label: Multicellular_anatomical_structure
+    description: an anatomical structure that has more than one cell as a part, including blood 
+  - classes:
+      - NCBITaxon:33208
+    label: Metazoan  
+    description: an organism that belongs to the division Metazoa or a term that is applicable to Metazoa
+  - classes:
+      - NCBITaxon:40674
+    label: Mammalia
+    description: an organism that belongs to the class Mammalia or a term that is applicable to Mammalia
+  - classes:
+      - NCBITaxon:7215
+    label: Drosophila
+    description: an organism that belongs to the genus Drosophila or a term that is applicable to Drosophila
+  - classes:
+      - NCBITaxon:8353
+    label: Xenopus
+    description: an organism that belongs to the genus Xenopus or a term that is applicable to Xenopus
+  - classes:
+      - NCBITaxon:6239
+    label: Caenorhabditis_elegans
+    description: an organism that belongs to the species C. elegans or a term that is applicable to C. elegans
+  - classes:
+      - NCBITaxon:7227
+    label: Drosophila_melanogaster
+    description: an organism that belongs to the species D. melanogaster or a term that is applicable to D. melanogaster
+  - classes:
+      - NCBITaxon:7955
+    label: Danio_rerio
+    description: an organism that belongs to the species D. rerio or a term that is applicable to D. rerio
+  - classes:
+      - NCBITaxon:9606
+    label: Homo_sapiens
+    description: an organism that belongs to the species H. sapiens or a term that is applicable to H. sapiens
+  - classes:
+      - HANCESTRO:0004
+    label: Race
+    description: a term that refers to the ancestry of a Homo sapiens
+  - classes:
+      - MONDO:0000001
+    label: Disease
+    description: a disease or disorder, plus 'normal' (latter pulled from SPARQL query)
+  - classes:
+      - UBERON:0000105
+      - FBdv:00007012
+      - WBls:0000075
+      - ZFS:0100000
+      - MmusDv:0000000
+      - HsapDv:0000000
+      - XAO:1000000
+    label: Developmental_stage
+    description: a term that refers to a life cycle stage
+
 curie_map:
   GITHUB: https://github.com/
   GITHUBH: http://github.com/
