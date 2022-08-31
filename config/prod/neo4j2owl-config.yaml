@@ -349,6 +349,7 @@ neo_node_labelling:
     description: an organism that belongs to the class Mammalia or a term that is applicable to Mammalia
   - classes:
       - NCBITaxon:7215
+      - FBbt:10000000
     label: Drosophila
     description: an organism that belongs to the genus Drosophila or a term that is applicable to Drosophila
   - classes:
@@ -419,6 +420,7 @@ curie_map:
   MONDO: http://purl.obolibrary.org/obo/MONDO_
   EFO: http://www.ebi.ac.uk/efo/EFO_
   PATO: http://purl.obolibrary.org/obo/PATO_
+  FBbt: http://purl.obolibrary.org/obo/FBbt_
 
 filters:
   solr:
