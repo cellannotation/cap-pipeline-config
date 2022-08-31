@@ -349,6 +349,7 @@ neo_node_labelling:
     description: an organism that belongs to the class Mammalia or a term that is applicable to Mammalia
   - classes:
       - NCBITaxon:7215
+      - FBbt:10000000
     label: Drosophila
     description: an organism that belongs to the genus Drosophila or a term that is applicable to Drosophila
   - classes:
@@ -391,6 +392,19 @@ neo_node_labelling:
     description: a term that refers to a life cycle stage
 
 curie_map:
+  CL: http://purl.obolibrary.org/obo/CL_
+  BFO: http://purl.obolibrary.org/obo/BFO_
+  UBERON: http://purl.obolibrary.org/obo/UBERON_
+  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
+  FBbt: http://purl.obolibrary.org/obo/FBbt_
+  HANCESTRO: http://purl.obolibrary.org/obo/HANCESTRO_
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
+  FBdv: http://purl.obolibrary.org/obo/FBdv_
+  WBls: http://purl.obolibrary.org/obo/WBls_
+  ZFS: http://purl.obolibrary.org/obo/ZFS_
+  MmusDv: http://purl.obolibrary.org/obo/MmusDv_
+  HsapDv: http://purl.obolibrary.org/obo/HsapDv_
+  XAO: http://purl.obolibrary.org/obo/XAO_
   GITHUB: https://github.com/
   GITHUBH: http://github.com/
   PMID: http://www.ncbi.nlm.nih.gov/pubmed/
@@ -406,19 +420,15 @@ curie_map:
   skos: http://www.w3.org/2004/02/skos/core#
   ensembl: http://identifiers.org/ensembl/
   RO: http://purl.obolibrary.org/obo/RO_
-  UBERON: http://purl.obolibrary.org/obo/UBERON_
-  CL: http://purl.obolibrary.org/obo/CL_
   n2o: http://n2o.neo/custom/
   ILX: http://uri.interlex.org/base/ilx_
-  NCBITaxon: http://purl.obolibrary.org/obo/NCBITaxon_
   PR: http://purl.obolibrary.org/obo/PR_
   SO: http://purl.obolibrary.org/obo/SO_
   OBI: http://purl.obolibrary.org/obo/OBI_
   PCL: http://purl.obolibrary.org/obo/PCL_
-  HANCESTRO: http://purl.obolibrary.org/obo/HANCESTRO_
-  MONDO: http://purl.obolibrary.org/obo/MONDO_
   EFO: http://www.ebi.ac.uk/efo/EFO_
   PATO: http://purl.obolibrary.org/obo/PATO_
+  
 
 filters:
   solr:
