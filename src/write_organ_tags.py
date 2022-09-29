@@ -8,6 +8,8 @@
 import argparse
 import ruamel.yaml
 import utils.config_autogenerate_utils as utils
+
+
 # from config_autogenerate_utils import utils
 
 
@@ -27,17 +29,17 @@ def generate_organ_cells(output):
         # RO:0002131 = 'overlaps'
         dl_query = "RO:0002131 some " + curie
         label = n['xLabel']['value'].replace(" ", "_")
-        organs.append((dl_query, label))
+        organs.append((dl_query, label, curie))
     return organs
 
 
-parser = argparse.ArgumentParser(description = 'set destination YAML file for query output')
+parser = argparse.ArgumentParser(description='set destination YAML file for query output')
 
-parser.add_argument('-i', '--inputfile', default = '../config/prod/neo4j2owl-config_manual.yaml', help = '''
+parser.add_argument('-i', '--inputfile', default='../config/prod/neo4j2owl-config_manual.yaml', help='''
     Use this option to indicate destination (input) file for organ cell DL queries and semantic labels. By default, query output
     is sent to a file named neo4j2owl-config.yaml.
     ''')
-parser.add_argument('-o', '--outputfile', default = '../config/prod/neo4j2owl-config.yaml', help = '''
+parser.add_argument('-o', '--outputfile', default='../config/prod/neo4j2owl-config.yaml', help='''
     Use this option to indicate the final filename for inputfile + organ cell DL queries and semantic labels. By default, the final
     output file is named neo4j2owl-config.yaml.
     ''')
@@ -61,7 +63,6 @@ WHERE
 
 # <http://purl.obolibrary.org/obo/uberon/core#organ_slim>
 query_output = utils.run_query(organ_query)
-
 
 # generate list of organ cell DL queries and semantic labels
 organ_list = generate_organ_cells(query_output)

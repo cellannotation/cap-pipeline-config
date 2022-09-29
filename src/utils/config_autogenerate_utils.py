@@ -1,5 +1,8 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 from collections import namedtuple
+from typing import List, Dict
+
+Config = namedtuple('Config', 'classes label')
 
 
 def run_query(query):
@@ -24,7 +27,7 @@ def run_query(query):
     return output
 
 
-def update_neo_node_labelling(neo_node_labelling, item_list):
+def update_neo_node_labelling(neo_node_labelling: List[Dict], item_list: List[List[str]]):
     """Updates given neo_node_labelling list with given item_list list, also removes duplicates. Returns updated list
 
     Parameters:
@@ -40,40 +43,35 @@ def update_neo_node_labelling(neo_node_labelling, item_list):
 
     # Initialize list of Config namedtuple
     config_set = []
-    Config = namedtuple('Config', 'classes label')
     for x in output_list:
-        label = x['label']
-        for classes in x['classes']:
-            config = Config(classes, label)
-            config_set.append(config)
+        append_config(config_set, x)
 
     # Add given list items which contains classes and label pairs, generated automatically via SPARQL query
     for item in item_list:
-        config = Config(item[0], item[1])
-        config_set.append(config)
+        config_set.append(Config(item[0], item[1]))
+        config_set.append(Config(item[2], item[1]))
 
     # Remove duplicates
     config_set = set(config_set)
 
     # Convert list of namedtuple to list of dict
-    converter = []
+    converter = {}
     for x in config_set:
-        converter.append(x._asdict())
+        if x.label in converter:
+            converter.get(x.label).append(x.classes)
+        else:
+            converter.update({x.label: [x.classes]})
 
     # Change {'classes': 'UBERON:0010000', 'label': 'Multicellular_anatomical_structure'} to
     # {'classes': ['UBERON:0010000'], 'label': 'Multicellular_anatomical_structure'}
-    for x in converter:
-        x['classes'] = [x.get('classes')]
-
-    # Merge classes based on labels
     output_list = list()
-    for i in converter:
-        append = True
-        for j in output_list:
-            if i.get('label') == j.get('label'):
-                j.get('classes').extend(i.get('classes'))
-                append = False
-        if append:
-            output_list.append(i)
+    for x in converter:
+        output_list.append({'classes': converter.get(x), 'label': x})
 
     return output_list
+
+
+def append_config(config_set, x):
+    for classes in x['classes']:
+        config = Config(classes, x['label'])
+        config_set.append(config)
