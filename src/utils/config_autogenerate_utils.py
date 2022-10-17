@@ -1,6 +1,7 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 from collections import namedtuple
 from typing import List, Dict
+from ordered_set import OrderedSet
 
 Config = namedtuple('Config', 'classes label')
 
@@ -52,7 +53,7 @@ def update_neo_node_labelling(neo_node_labelling: List[Dict], item_list: List[Li
         config_set.append(Config(item[2], item[1]))
 
     # Remove duplicates
-    config_set = set(config_set)
+    config_set = OrderedSet(config_set)
 
     # Convert list of namedtuple to list of dict
     converter = {}
