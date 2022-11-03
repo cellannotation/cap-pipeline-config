@@ -18,7 +18,7 @@ To upload local `solr.json` use the following commands:
 
     gsutil cp solr.json gs://cap-${ENV}-ols/solr/indexes/solr.json
 
-`sandbox_env_here` can be either one of `prod`, `rc1`, `clean`
+`sandbox_env_here` can be either one of `capv2-gke-prod`, `capv2-gke-rc1`
 
 ### Manual deployment
 
@@ -68,4 +68,3 @@ Connect to solr:
     ES_INSTANCE_REGION=$(gcloud compute instances list --project $PROJECT_ID | grep solr | awk '{ print $2 }')
 
     gcloud compute ssh --project $PROJECT_ID --ssh-flag="-L 8984:localhost:8983" --zone $ES_INSTANCE_REGION $ES_INSTANCE_NAME
-
