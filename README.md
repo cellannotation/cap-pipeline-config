@@ -7,8 +7,8 @@ Building ontology pipeline configurations for Cell Annotation Platform
 
 Ask admin to grant you with `Storage Object Admin` role.
 
-To auto-deploy solr.json index please keep `gs://capv2-gke-rc1-ols/solr/indexes/solr.json` up to date. Every time CAP is deployed
-CI/CD pipeline is uses `gs://capv2-gke-rc1-ols/solr/indexes/solr.json` to migrate indexes for OLS.
+To auto-deploy solr.json index please keep `gs://cap-gke-rc1-ols/solr/indexes/solr.json` up to date. Every time CAP is deployed
+CI/CD pipeline is uses `gs://cap-gke-rc1-ols/solr/indexes/solr.json` to migrate indexes for OLS.
 
 To upload local `solr.json` use the following commands:
 
@@ -16,7 +16,7 @@ To upload local `solr.json` use the following commands:
 
     gcloud auth login
 
-    gsutil cp solr.json gs://capv2-${ENV}-ols/solr/indexes/solr.json
+    gsutil cp solr.json gs://capv-${ENV}-ols/solr/indexes/solr.json
 
 `sandbox_env_here` can be either one of `gke-prod`, `gke-rc1`
 
@@ -57,9 +57,9 @@ Before running further commands connect to remote `solr` instance:
 
 e.g.
 
-    export PROJECT_ID=capv2-322001 # for RC1 taken from `gcloud projects list`
+    export PROJECT_ID=capv2-gke-rc1 # for RC1 taken from `gcloud projects list`
 
-    export PROJECT_ID=capv2-prod-332920 # for Prod taken from `gcloud projects list`
+    export PROJECT_ID=capv2-gke-prod # for Prod taken from `gcloud projects list`
 
 Connect to solr:
 
