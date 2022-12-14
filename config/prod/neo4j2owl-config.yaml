@@ -15,8 +15,8 @@ represent_values_and_annotations_as_json:
 
 neo_node_labelling:
   - classes:
-      - CL:0000548
-    label: Animal_cell
+      - CL:0000000
+    label: Cell
   - classes:
       - UBERON:0010000
       - UBERON:0000178
