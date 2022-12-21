@@ -16,7 +16,7 @@ To upload local `solr.json` use the following commands:
 
     gcloud auth login
 
-    gsutil cp solr.json gs://capv-${ENV}-ols/solr/indexes/solr.json
+    gsutil cp solr.json gs://cap-${ENV}-ols/solr/indexes/solr.json
 
 `sandbox_env_here` can be either one of `gke-prod`, `gke-rc1`
 
