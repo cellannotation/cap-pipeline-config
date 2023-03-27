@@ -6,7 +6,6 @@ http://purl.obolibrary.org/obo/mondo/mondo-base.owl
 http://purl.obolibrary.org/obo/pato.owl
 https://raw.githubusercontent.com/kharchenkolab/cap_organ_slim/main/src/results/cap_organ_slim.owl
 https://raw.githubusercontent.com/kharchenkolab/cap_ontology/main/capo-base.owl
-http://purl.obolibrary.org/obo/fbbt.owl
 http://purl.obolibrary.org/obo/fbdv.owl
 http://purl.obolibrary.org/obo/wbls.owl
 http://purl.obolibrary.org/obo/zfs.owl
