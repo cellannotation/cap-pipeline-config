@@ -20,7 +20,7 @@ neo_node_labelling:
   - classes:
       - UBERON:0010000
       - UBERON:0000178
-    label: Multicellular_anatomical_structure
+    label: Multicellular_anatomical_structuree
   - classes:
       - NCBITaxon:33208
     label: Metazoan
