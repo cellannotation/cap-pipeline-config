@@ -12,4 +12,6 @@ http://purl.obolibrary.org/obo/zfs.owl
 http://purl.obolibrary.org/obo/mmusdv.owl
 http://purl.obolibrary.org/obo/hsapdv.owl
 http://purl.obolibrary.org/obo/xao.owl
-http://purl.obolibrary.org/obo/pcl.owl
+http://purl.obolibrary.org/obo/pcl-base.owl
+https://raw.githubusercontent.com/obophenotype/uberon/master/src/ontology/bridge/cl-bridge-to-xao.owl
+https://raw.githubusercontent.com/obophenotype/uberon/master/src/ontology/bridge/uberon-bridge-to-xao.owl
