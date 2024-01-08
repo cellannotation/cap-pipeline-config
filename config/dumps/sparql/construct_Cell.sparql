@@ -7,5 +7,6 @@ WHERE {
 VALUES ?s
 {
   CAPO:1000000 #doublet
-  CAPO:1000001 #junk}
+  CAPO:1000001 #junk
+}
 }
