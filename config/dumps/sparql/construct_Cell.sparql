@@ -1,0 +1,11 @@
+PREFIX CAPO: <http://purl.obolibrary.org/obo/CAPO_>
+
+CONSTRUCT {
+	?s <http://n2o.neo/property/nodeLabel> "Cell" .
+}
+WHERE {
+VALUES ?s
+{
+  CAPO:1000000 #doublet
+  CAPO:1000001 #junk}
+}
