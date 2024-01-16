@@ -20,6 +20,7 @@ neo_node_labelling:
   - classes:
       - UBERON:0010000
       - UBERON:0000178
+      - XAO:0000000
     label: Multicellular_anatomical_structure
   - classes:
       - NCBITaxon:33208
