@@ -6,12 +6,5 @@ http://purl.obolibrary.org/obo/mondo/mondo-base.owl
 http://purl.obolibrary.org/obo/pato.owl
 https://raw.githubusercontent.com/kharchenkolab/cap_organ_slim/main/src/results/cap_organ_slim.owl
 https://raw.githubusercontent.com/kharchenkolab/cap_ontology/main/capo-base.owl
-http://purl.obolibrary.org/obo/fbdv.owl
-http://purl.obolibrary.org/obo/wbls.owl
-http://purl.obolibrary.org/obo/zfs.owl
-http://purl.obolibrary.org/obo/mmusdv.owl
-http://purl.obolibrary.org/obo/hsapdv.owl
-http://purl.obolibrary.org/obo/xao.owl
-https://raw.githubusercontent.com/obophenotype/provisional_cell_ontology/master/pcl-base.owl
-https://raw.githubusercontent.com/obophenotype/uberon/master/src/ontology/bridge/cl-bridge-to-xao.owl
-https://raw.githubusercontent.com/obophenotype/uberon/master/src/ontology/bridge/uberon-bridge-to-xao.owl
+http://purl.obolibrary.org/obo/pcl.owl
+https://github.com/obophenotype/uberon/releases/download/v2023-12-08/composite-metazoan.owl
