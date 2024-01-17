@@ -2,5 +2,5 @@ PREFIX : <http://virtualflybrain.org#>
 
 CONSTRUCT { ?x ?p ?y. }
 
-WHERE {?x ?p ?y. filter(!contains(str(?s), "http://purl.obolibrary.org/obo/FBbt_"))}
+WHERE {?x ?p ?y. filter(!contains(str(?x), "http://purl.obolibrary.org/obo/FBbt_"))}
 
