@@ -1,0 +1,18 @@
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX cl:       <http://purl.obolibrary.org/obo/cl#>
+PREFIX n2o:      <http://n2o.neo/property/>
+
+CONSTRUCT {
+  ?term n2o:nodeLabel "Homo_sapiens" .
+  ?term n2o:nodeLabel "Mus_musculus" .
+}
+WHERE {
+  {
+    ?term oboInOwl:inSubset cl:human_subset .
+  }
+  UNION
+  {
+    ?term oboInOwl:inSubset cl:mouse_subset .
+  }
+}
+
