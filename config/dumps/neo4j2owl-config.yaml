@@ -409,6 +409,7 @@ curie_map:
   PCL: http://purl.obolibrary.org/obo/PCL_
   EFO: http://www.ebi.ac.uk/efo/EFO_
   PATO: http://purl.obolibrary.org/obo/PATO_
+  DHBA: https://purl.brain-bican.org/ontology/dhbao/DHBA_
 
 
 filters:
