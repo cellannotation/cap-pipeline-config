@@ -1,5 +1,3 @@
-Here’s the script again, with all lines kept under 140 characters:
-
 ```bash
 #!/usr/bin/env bash
 #
