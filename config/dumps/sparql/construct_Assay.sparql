@@ -8,6 +8,7 @@ VALUES ?s
 {efo:EFO_0009901 #10x 3' v1
 efo:EFO_0009899 #10x 3' v2
 efo:EFO_0009922 #10x 3' v3
+efo:EFO_0022604 #10x 3' v4
 efo:EFO_0030003 #10x 3' transcription profiling
 efo:EFO_0011025 #10x 5' v1
 efo:EFO_0009900 #10x 5' v2
