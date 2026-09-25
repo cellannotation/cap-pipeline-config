@@ -25,6 +25,7 @@ efo:EFO_0008930 #Smart-seq
 efo:EFO_0008931 #Smart-seq2
 efo:EFO_0700007 #targeted ExSeq
 efo:EFO_0700008 #untargeted ExSeq
+efo:EFO_0005684 #RNA-seq of coding RNA from single cells
 efo:EFO_0010961 #Visium Spatial Gene Expression
   }
 }
