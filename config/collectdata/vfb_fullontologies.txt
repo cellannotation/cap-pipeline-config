@@ -5,7 +5,7 @@ http://purl.obolibrary.org/obo/hancestro/hancestro.owl
 http://purl.obolibrary.org/obo/mondo/mondo-simple.owl
 http://purl.obolibrary.org/obo/pato.owl
 https://raw.githubusercontent.com/kharchenkolab/cap_organ_slim/main/src/results/cap_organ_slim.owl
-https://raw.githubusercontent.com/kharchenkolab/cap_ontology/main/capo-base.owl
+https://raw.githubusercontent.com/cellannotation/cap_ontology/main/capo-base.owl
 http://purl.obolibrary.org/obo/mmusdv.owl
 http://purl.obolibrary.org/obo/hsapdv.owl
 https://purl.brain-bican.org/ontology/dhbao/dhbao.owl
